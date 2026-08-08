@@ -13,6 +13,13 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+    key = 'dwJoker',
+    px = 71,
+    py = 95,
+    path = 'jokers.png'
+}
+
+SMODS.Atlas {
     key = 'isojoker',
     px = 71,
     py = 95,

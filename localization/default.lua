@@ -22,6 +22,85 @@ return {
         Edition = {},
         Enhanced = {},
         Joker = {
+            j_dw_poppy = {
+                name = "Poppy",
+                text = {
+                    "{C:chips}+#2#{} Chips for each",
+                    "hand played this round",
+                    "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
+                },
+                unlock = {
+                    "Defeat a {C:attention}Blind{}",
+                    "with {C:attention}0{} hands left"
+                }
+            },
+            j_dw_boxten = {
+                name = "Boxten",
+                text = {
+                    "{C:mult}+#1#{} Mult for each",
+                    "card in played hand",
+                },
+                unlock = {
+                    "Play a #1# card hand",
+                    "that contains only",
+                    "{C:attention}face{} cards",
+                }
+            },
+            j_dw_shrimpo = {
+                name = "Shrimpo",
+                text = {
+                    "{C:green}#1# in #2#{} chance for",
+                    "{X:blind,C:white}X#3#{C:blind} Blind Size{}. Otherwise,",
+                    "{X:blind,C:white}X#4#{C:blind} Blind Size",
+                },
+                unlock = {
+                    "{C:attention}Destroy{} a",
+                    "playing card"
+                },
+            },
+            j_dw_brightney = {
+                name = "Brightney",
+                text = {
+                    "Gains {C:mult}+#1#{} Mult for",
+                    "each {C:attention}face down{}",
+                    "card played",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                },
+                unlock = {
+                    "Play a #1# card hand",
+                    "containing only cards",
+                    "that are face down",
+                },
+            },
+            j_dw_razzledazzle = {
+                name = "Razzle & Dazzle",
+                text = {
+                    "On {C:attention}#5#{} numbered Rounds",
+                    "Played {V:1}#1#{} and {V:2}#2#{} cards",
+                    "grant {C:mult}+#7#{} Mult when scored",
+                    "{C:inactive}On {C:attention}#6#{C:inactive} numbered Rounds",
+                    "{C:inactive}Played {V:3}#3#{C:inactive} and {V:4}#4#{C:inactive} cards",
+                    "{C:inactive}grant {C:mult}+#7#{C:inactive} Mult when scored",
+                },
+                unlock = {
+                    "Play a 5 card hand",
+                    "containing only",
+                    "Odd numbered ranks",
+                    "{C:inactive}(A, 3, 5, 7, 9)",
+                    "or Even numbered ranks",
+                    "{C:inactive}(2, 4, 6, 8, 10)",
+                },
+
+            },
+            j_dw_squirm = {
+                name = "Squirm",
+                text = {
+                    "Destroys a random",
+                    "{C:attention}consumable{} in your",
+                    "possession and",
+                    "grants {X:mult,C:white}X#1#{} Mult",
+                }
+            },
             j_dw_dandy_pre_encounter = {
                 name = '{C:dw_dandy}Dandicus Dancifer{}',
                 text = {
@@ -578,7 +657,7 @@ return {
             k_dw_dandy_stage3_buy_4 = "Good choice on your part.",
             k_dw_dandy_stage3_buy_5 = "About time.",
             k_dw_dandy_stage3_buy_6 = "Heh, you had me worried there for a second.",
-
+            
             k_candy = "Candy",
             b_candy_cards = "Candies",
             k_item = "Item",
@@ -595,6 +674,9 @@ return {
 
             k_gourdyspeak1 = "Yay!! Hehehe!",
             k_gourdyspeak2 = "Trick or Treat!",
+
+            dw_rnd_odd = 'Odd',
+            dw_rnd_even = 'Even',
 
         },
         high_scores = {},
