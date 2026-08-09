@@ -1,23 +1,32 @@
-SMODS.Joker {
+SMODS.Sound({
     key = 'pebble',
-    cost = 20,
-    rarity = 4,
-    atlas = 'dw',
-    pos = { x = 8, y = 0 },
-    config = {
-        extra = { 
-            bark_1 = 2,
-            bark_2 = 2
-        }
-    },
-    update = function(self,card,dt)
-    end
-}
+    path = 'dw_pebble.ogg',
+})
 
 SMODS.Joker {
-    key = 'tw_pebble',
+    key = "pebble",
+    atlas = 'dwJoker',
+    pos = { x = 5, y = 6 },
+    soul_pos = nil,
+    rarity = 'dw_main',
     cost = 20,
-    rarity = 'dw_twisted_legendary',
-    atlas = 'dw',
-    pos = { x = 8, y = 0 },
+    config = { extra = { xblindsize = 0.5 } },
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    unlocked = false,
+    calculate = function(self, card, context)
+        if context.first_hand_drawn then
+            return {
+                xblindsize = card.ability.extra.xblindsize,
+                remove_default_message = true,
+                message = localize { type = 'variable', key = 'a_xblindsize', vars = { card.ability.extra.xblindsize } },
+                sound = "dw_pebble",
+                colour = G.C.TEXT_UI_DARK,
+            }
+        end
+    end,
+    check_for_unlock = function(self, args)
+        return args.type == 'dw_pebble'
+    end,
 }

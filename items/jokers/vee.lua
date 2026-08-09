@@ -1,136 +1,60 @@
-SMODS.Scoring_Parameter({
+SMODS.Sound({
     key = 'vee',
-    default_value = 1,
-    colour = HEX("b4f2b6"),
-    calculation_keys = { 'vee', 'xvee' },
-    calc_effect = function(self, effect, scored_card, key, amount, from_edition)
-        if not SMODS.Calculation_Controls.chips then return end
-        if key == 'vee' and amount then
-            if effect.card and effect.card ~= scored_card then vee_card(effect.card) end
-            self:modify(amount)
-            card_eval_status_text(scored_card, 'extra', nil, percent, nil,
-                {
-                    message = localize { type = 'variable', key = amount > 0 and 'a_chips' or 'a_chips_minus', vars = { amount } },
-                    colour =
-                        self.colour
-                })
-            return true
-        end
-        if key == 'xvee' and amount then
-            if effect.card and effect.card ~= scored_card then vee_card(effect.card) end
-            self:modify(self.current * (amount - 1))
-            card_eval_status_text(scored_card, 'extra', nil, percent, nil,
-                {
-                    message = localize { type = 'variable', key = amount > 0 and 'a_chips' or 'a_chips_minus', vars = { 'X' .. amount } },
-                    colour =
-                        self.colour
-                })
-            return true
-        end
-    end
+    path = 'dw_vee.ogg',
+    pitch = 1,
 })
-
-SMODS.Scoring_Calculation({
-    key = "vee",
-    func = function(self, chips, mult, flames)
-        return (chips * mult) ^ SMODS.get_scoring_parameter('dw_vee', flames)
-    end,
-    parameters = { 'chips', 'mult', SMODS.current_mod.prefix .. '_vee' },
-    replace_ui = function(self)
-        local scale = 0.3
-        return
-        {
-            n = G.UIT.R,
-            config = { align = "cm", minh = 1, padding = 0.1 },
-            nodes = {
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', colour = G.C.CLEAR },
-                    nodes = {
-                        { n = G.UIT.T, config = { text = "(", colour = G.C.UI.TEXT_INACTIVE, scale = 1 }, }
-                    }
-                },
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', id = 'hand_chips' },
-                    nodes = {
-                        SMODS.GUI.score_container({
-                            type = 'chips',
-                            text = 'chip_text',
-                            align = 'cr',
-                            w = 1.2,
-                            scale = scale
-                        })
-                    }
-                },
-                SMODS.GUI.operator(scale * 0.75),
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', id = 'hand_mult' },
-                    nodes = {
-                        SMODS.GUI.score_container({
-                            type = 'mult',
-                            align = 'cm',
-                            w = 1.2,
-                            scale = scale
-                        })
-                    }
-                },
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', colour = G.C.CLEAR },
-                    nodes = {
-                        { n = G.UIT.T, config = { text = ")", colour = G.C.UI.TEXT_INACTIVE, scale = 1 }, }
-                    }
-                },
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', colour = G.C.CLEAR },
-                    nodes = {
-                        { n = G.UIT.T, config = { text = "^", colour = G.C.DARK_EDITION, scale = 0.75 }, }
-                    }
-                },
-                {
-                    n = G.UIT.C,
-                    config = { align = 'cm', id = 'hand_dw_vee' },
-                    nodes = {
-                        SMODS.GUI.score_container({
-                            type = 'dw_vee',
-                            align = 'cl',
-                            w = 1.2,
-                            scale = scale
-                        })
-                    }
-                },
-            }
-        }
-    end
-})
-
---HEX("b4f2b6")
 
 SMODS.Joker {
     key = 'vee',
-    rarity = 3,
-    cost = 10,
-    atlas = 'dw',
-    pos = { x = 8, y = 0 },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { localize('k_dw_veespeak' .. pseudorandom("tv", 1, 4)) } }
+    atlas = 'dwJoker',
+    pos = { x = 9, y = 6 },
+    soul_pos = nil,
+    rarity = 'dw_main',
+    cost = 20,
+    config = { extra = { choice_mod = 1, size_mod = 2 } },
+    blueprint_compat = false,
+    eternal_compat = true,
+    perishable_compat = true,
+    unlocked = false,
+
+    add_to_deck = function(self, card, from_debuff)
+        if not G.GAME.modifiers.booster_choice_mod then
+            G.GAME.modifiers.booster_choice_mod = 0
+        end
+        G.GAME.modifiers.booster_choice_mod = G.GAME.modifiers.booster_choice_mod + card.ability.extra.choice_mod
+
+        if not G.GAME.modifiers.booster_size_mod then
+            G.GAME.modifiers.booster_size_mod = 0
+        end
+        G.GAME.modifiers.booster_size_mod = G.GAME.modifiers.booster_size_mod + card.ability.extra.size_mod
     end,
-    add_to_deck = function(self, card)
-        SMODS.set_scoring_calculation('dw_vee')
-    end,
-    remove_from_deck = function(self, card)
-        if not next(SMODS.find_card("j_dw_vee")) then
-            SMODS.set_scoring_calculation('multiply')
+
+    remove_from_deck = function(self, card, from_debuff)
+        if not G.GAME.modifiers.booster_choice_mod then
+            G.GAME.modifiers.booster_choice_mod = 0
+        else
+            G.GAME.modifiers.booster_choice_mod = G.GAME.modifiers.booster_choice_mod - card.ability.extra.choice_mod
+        end
+
+        if not G.GAME.modifiers.booster_size_mod then
+            G.GAME.modifiers.booster_size_mod = 0
+        else
+            G.GAME.modifiers.booster_size_mod = G.GAME.modifiers.booster_size_mod - card.ability.extra.size_mod
         end
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
+        if context.open_booster then
             return {
-                vee = math.log(hand_chips * mult) ^ 0.1
+                message = localize('dw_vee_ability'),
+                colour = G.C.GREEN,
+                sound = 'dandy_vee'
             }
         end
-    end
+    end,
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.choice_mod, card.ability.extra.size_mod }, key = self.key }
+    end,
+    check_for_unlock = function(self, args)
+        return args.type == 'dw_vee'
+    end,
 }

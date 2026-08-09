@@ -232,7 +232,7 @@ return {
                     "{C:inactive}#1#{}"
                 }
             },
-            j_dw_vee = {
+            --[[j_dw_vee = {
                 name = "Vee Version One",
                 text = {
                     {
@@ -243,6 +243,19 @@ return {
                         "Vee's scoring window",
                         "{C:green,s:0.85,E:1}#1#{}"
                     }
+                }
+            },]]
+            j_dw_vee = {
+                name = "Vee",
+                text = {
+                    "{C:attention}Booster Packs{} have",
+                    "{C:attention}#2#{} extra items and",
+                    "allows {C:attention}#1#{} more item",
+                    "to be chosen",
+                },
+                unlock = {
+                    "Skip a {C:attention}Mega",
+                    "{C:attention}Spectral Pack",
                 }
             },
             j_dw_shelly = {
@@ -435,18 +448,13 @@ return {
             j_dw_pebble = {
                 name = "Pebble",
                 text = {
-                    "{C:attention}Doubles{} values of",
-                    "adjacent {C:attention}Jokers{}",
-                    "{C:red}Joker ability not implemented!{}"
-                }
-            },
-            j_dw_tw_pebble = {
-                name = "Twisted Pebble",
-                text = {
-                    "Don't tell me it's Nermal...",
-                    "{C:red,s:1.5}It's Nermal.{}",
-                    "{C:red}Joker ability not implemented!{}"
-                }
+                    "Halves {C:attention}Blind{}",
+                    "requirement",
+                },
+                unlock = {
+                    "Discover through",
+                    "the {C:attention}Ticket Tag"
+                },
             },
             j_dw_brick = {
                 name = "Brick",
@@ -657,7 +665,7 @@ return {
             k_dw_dandy_stage3_buy_4 = "Good choice on your part.",
             k_dw_dandy_stage3_buy_5 = "About time.",
             k_dw_dandy_stage3_buy_6 = "Heh, you had me worried there for a second.",
-            
+
             k_candy = "Candy",
             b_candy_cards = "Candies",
             k_item = "Item",
