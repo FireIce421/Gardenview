@@ -58,3 +58,14 @@ SMODS.Joker {
         return args.type == 'dw_vee'
     end,
 }
+
+local calculate_ref = SMODS.current_mod.calculate
+function SMODS.current_mod.calculate(self, context)
+    calculate_ref(self, context)
+    
+    if not G.P_CENTERS.j_dw_vee.unlocked then
+        if context.skipping_booster and context.booster.key == 'p_spectral_mega_1' then
+            check_for_unlock{type = 'dw_vee'}
+        end
+    end
+end

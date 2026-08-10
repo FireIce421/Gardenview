@@ -32,3 +32,14 @@ SMODS.Joker{
         return args.type == 'dw_shrimpo'
     end,
 }
+
+local calculate_ref = SMODS.current_mod.calculate
+function SMODS.current_mod.calculate(self, context)
+    calculate_ref(self, context)
+    
+    if not G.P_CENTERS.j_dw_shrimpo.unlocked then
+        if context.remove_playing_cards then
+            check_for_unlock{type = 'dw_shrimpo'}
+        end
+    end
+end

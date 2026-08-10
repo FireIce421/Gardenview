@@ -22,6 +22,21 @@ return {
         Edition = {},
         Enhanced = {},
         Joker = {
+            j_dw_brick = {
+                name = "Brick",
+                text = {
+                    "{X:default,C:white}X0.8{} Chips and Mult"
+                }
+            },
+            j_dw_luckycoin = {
+                name = "Lucky Coin",
+                text = {
+                    "Creates a random {C:attention}Joker{}",
+                    "or {C:tarot}Consumable{} when",
+                    "a {C:attentin}Blind{} is {C:attention}skipped{}"
+                }
+            },
+
             j_dw_poppy = {
                 name = "Poppy",
                 text = {
@@ -92,6 +107,32 @@ return {
                 },
 
             },
+            j_dw_goob = {
+                name = "Goob",
+                text = {
+                    "Moves 1 random {C:attention}Consumable",
+                    "card to your possession when",
+                    "opening any {C:attention}Booster Pack"
+                },
+                unlock = {
+                    "Play a #1# card hand",
+                    "that contains only",
+                    "{C:attention,E:1}Mult{} cards",
+                },
+            },
+            j_dw_scraps = {
+                name = "Scraps",
+                text = {
+                    "Earn {C:money}$#1#{} if a {C:attention}Lucky",
+                    "card successfully",
+                    "triggers",
+                },
+                unlock = {
+                    "Play a #1# card hand",
+                    "that contains only",
+                    "{C:attention,E:1}Lucky{} cards",
+                },
+            },
             j_dw_squirm = {
                 name = "Squirm",
                 text = {
@@ -101,43 +142,181 @@ return {
                     "grants {X:mult,C:white}X#1#{} Mult",
                 }
             },
-            j_dw_dandy_pre_encounter = {
-                name = '{C:dw_dandy}Dandicus Dancifer{}',
+            j_dw_cosmo = {
+                name = "Cosmo",
                 text = {
-                    {
-                        "Gains {X:red,C:white}X0.5{} Mult for",
-                        "every item bought",
-                        "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult)",
-                        "{C:inactive,s:0.8}Going 3 Shops without buying anything will do...{}",
-                        "{C:inactive,s:0.7}#2#/3{}"
-                    }
+                    "{X:mult,C:white}X#1#{} Mult for each",
+                    "hand remaining",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                },
+            },
+            j_dw_teagan = {
+                name = "Teagan",
+                text = {
+                    "{C:mult}+#2#{} Discard for",
+                    "each {C:money}$#3#{} owned",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Discards)"
+                },
+            },
+            j_dw_tisha = {
+                name = "Tisha",
+                text = {
+                    "All other {C:attention}Jokers{}",
+                    "score {C:chips}+#1#{} Chips",
+                },
+            },
+            j_dw_waxwell = {
+                name = "Waxwell",
+                text = {
+                    "Hawt Saus"
+                },
+            },
+            j_dw_looey = {
+                name = "Looey",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult for each",
+                    "hand size below {C:attention}#3#",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                },
+            },
+            j_dw_yatta = {
+                name = "Yatta",
+                text = {
+                    "Gives 3 Candy Consumables",
+                    "when a {C:attention}Boss Blind{} is defeated.",
+                    "{C:blue,s:0.8}#1#{}"
                 }
             },
-            j_dw_dandy_post_encounter = {
-                name = '{C:dw_dandy}Dandicus Dancifer{}',
+            j_dw_finn = {
+                name = "Finn",
+                text = {
+                    "{C:red}+50{} Mult",
+                    "At the end of the round,",
+                    "{X:red,C:white}X3{} Mult for {C:blue}1 hand{}",
+                    "{C:inactive}#1#{}"
+                }
+            },
+            --[[j_dw_vee = {
+                name = "Vee Version One",
                 text = {
                     {
-                        "Gains {X:red,C:white}X0.5{} Mult for",
-                        "every item bought",
-                        "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult)",
+                        "Adds a new scoring window",
                     },
                     {
-                        "If {C:red}nothing{} has been bought for {C:attention}3 Shops{}",
-                        "{C:red}Destroys{} {C:attention}ALL Jokers{} and then creates",
-                        "{C:dw_dandy,s:1.1}Twisted Dandy{}"
+                        "Adds {X:dark_edition,C:white}(log(chips*mult)^0.1)-1{} to",
+                        "Vee's scoring window",
+                        "{C:green,s:0.85,E:1}#1#{}"
+                    }
+                }
+            },]]
+            
+            
+            j_dw_blot = {
+                name = "Blot",
+                text = {
+                    "{X:mult,C:white}^1.15{} Mult.",
+                    "Create Blot Jr. when a {C:attention}Boss Blind{} is defeated."
+                }
+            },
+            j_dw_blotjr = {
+                name = "Blot Jr.",
+                text = {
+                    "{X:mult,C:white}X1.25{} Mult.",
+                    "Destroyed after {C:attention}#1#{} Rounds."
+                }
+            },
+            j_dw_gigi = {
+                name = "Gigi",
+                text = {
+                    "Create a {C:attention}Standard Tag{},",
+                    "{C:tarot}Charm Tag{}, {C:planet}Meteor Tag{},",
+                    "{C:attention}Buffoon Tag{} or {C:spectral}Ethereal",
+                    "{C:spectral}Tag{} at the end",
+                    "of the {C:attention}shop",
+                },
+                unlock = {
+                    "Discover every Tag",
+                }
+            },
+            j_dw_barnaby = {
+                name = "Barnaby Wilkers",
+                text = {
+                    "{X:dark_edition,C:white}^1.05{} Mult",
+                    "{C:red}Destoryed{} if Finn is removed",
+                    "{C:inactive}Cannot spawn if Finn is not in Joker slots{}"
+                }
+            },
+            j_dw_connie = {
+                name = "Connie",
+                text = {
+                    "POSESSION!!!",
+                    "{C:red}Ability not implemented!{}"
+                }
+            },
+            j_dw_connie_alt = {
+                name = "Boolynski",
+                text = {
+                    "Gourdy, you can't deadname Connie like that!"
+                }
+            },
+            j_dw_tw_connie = {
+                name = "Twisted Connie",
+                text = {
+                    "Gains {X:blue,C:white}X#1#{} Chips",
+                    "for every {C:attention}Joker{} you have",
+                    "{C:inactive}( Currently{} {X:blue,C:white}X#2#{} {C:inactive}Chips ){}",
+                    "{C:inactive}( Currently{} {X:blue,C:white}/#3#{} {C:inactive}Mult ){}",
+                }
+            },
+            j_dw_ipadkid = {
+                name = "Toodles",
+                text = {
+                    {
+                        "{C:green}#2# in #3#{} Chance to {C:attention}retrigger 8s{} #1# times."
+                    },
+                    {
+                        "Gee I WONDER what her ability is referencing.",
+                        "- Isotypical"
                     }
                 }
             },
-            j_dw_tw_dandy = {
-                name = '{C:dw_dandy}Twisted Dandy{}',
+            j_dw_rabid_kid = {
+                name = "Twisted Toodles",
                 text = {
-                    "Gains {X:red,C:white}X1{} Mult for",
-                    "every item bought",
-                    "Gains an additional {X:dark_edition,C:white}^0.05{} Mult for",
-                    "every {C:money}$1{} you have.",
-                    "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult){}",
-                    "{C:inactive}(Currently{} {X:dark_edition,C:white}^#2#{} {C:inactive}EMult){}"
+                    {
+                        "Retriggers {C:attention}all{} scored cards {C:attention}#1#{} times",
+                        "{C:attention}8s{} instead get retriggered {C:attention}#2#{} times"
+                    },
+                    {
+                        "Alright Isotypical, {C:red}pack it up{}",
+                        "with the {C:red}Almanac jokes.{}",
+                    }
                 }
+            },
+            
+            j_dw_rodger = {
+                name = "Rodger",
+                text = {
+                    "Upgrades poker hand",
+                    "if it is a {C:attention}#1#{}",
+                    "poker hand changes at",
+                    "end of round"
+                },
+                unlock = {
+                    "Discover {C:attention}#1#",
+                    "{C:attention}Boss Blinds"
+                },
+            },
+
+            j_dw_pebble = {
+                name = "Pebble",
+                text = {
+                    "{X:blind,C:white}X#1#{} Blind size"
+                },
+                unlock = {
+                    "Discover through",
+                    "the {C:attention}Ticket Tag"
+                },
             },
             j_dw_astro = {
                 name = 'Astro Novalite',
@@ -197,6 +376,74 @@ return {
                     }
                 }
             },
+            j_dw_shelly = {
+                name = "Shelly",
+                text = {
+                    "Each {C:attention}Joker{} reduces",
+                    "Blind Size by {X:blind,C:white}X#1#{}",
+                }
+            },
+            j_dw_tw_shelly = {
+                name = "Twisted Shelly",
+                text = {
+                    "{X:default,C:attention}^0.8{} Score and {X:default,C:attention}^1.1{} Blind Requirement",
+                    "when a hand is played,",
+                    "{X:legendary,C:white}X2{} Chips and Mult for every {C:attention}Joker{}"
+                }
+            },
+            j_dw_vee = {
+                name = "Vee",
+                text = {
+                    "{C:attention}Booster Packs{} have",
+                    "{C:attention}#2#{} extra items and",
+                    "allows {C:attention}#1#{} more item",
+                    "to be chosen",
+                },
+                unlock = {
+                    "Skip a {C:attention}Mega",
+                    "{C:attention}Spectral Pack",
+                }
+            },
+
+
+            j_dw_dandy_pre_encounter = {
+                name = '{C:dw_dandy}Dandicus Dancifer{}',
+                text = {
+                    {
+                        "Gains {X:red,C:white}X0.5{} Mult for",
+                        "every item bought",
+                        "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult)",
+                        "{C:inactive,s:0.8}Going 3 Shops without buying anything will do...{}",
+                        "{C:inactive,s:0.7}#2#/3{}"
+                    }
+                }
+            },
+            j_dw_dandy_post_encounter = {
+                name = '{C:dw_dandy}Dandicus Dancifer{}',
+                text = {
+                    {
+                        "Gains {X:red,C:white}X0.5{} Mult for",
+                        "every item bought",
+                        "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult)",
+                    },
+                    {
+                        "If {C:red}nothing{} has been bought for {C:attention}3 Shops{}",
+                        "{C:red}Destroys{} {C:attention}ALL Jokers{} and then creates",
+                        "{C:dw_dandy,s:1.1}Twisted Dandy{}"
+                    }
+                }
+            },
+            j_dw_tw_dandy = {
+                name = '{C:dw_dandy}Twisted Dandy{}',
+                text = {
+                    "Gains {X:red,C:white}X1{} Mult for",
+                    "every item bought",
+                    "Gains an additional {X:dark_edition,C:white}^0.05{} Mult for",
+                    "every {C:money}$1{} you have.",
+                    "{C:inactive}(Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult){}",
+                    "{C:inactive}(Currently{} {X:dark_edition,C:white}^#2#{} {C:inactive}EMult){}"
+                }
+            },
             j_dw_dyle = {
                 name = "{C:dw_dandy}Dyle Timesly{}",
                 text = {
@@ -215,140 +462,35 @@ return {
                     "{C:inactive}Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult{}"
                 }
             },
-            j_dw_yatta = {
-                name = "Yatta",
+
+
+            j_dw_eggson = {
+                name = "Eggson",
                 text = {
-                    "Gives 3 Candy Consumables",
-                    "when a {C:attention}Boss Blind{} is defeated.",
-                    "{C:blue,s:0.8}#1#{}"
+                    "Gives {C:attention}X#1#{} of",
+                    "{C:attention}Blind Size{} as {C:chips}Chips{}"
                 }
             },
-            j_dw_finn = {
-                name = "Finn",
+            j_dw_bassie = {
+                name = "Bassie",
                 text = {
-                    "{C:red}+50{} Mult",
-                    "At the end of the round,",
-                    "{X:red,C:white}X3{} Mult for {C:blue}1 hand{}",
-                    "{C:inactive}#1#{}"
-                }
-            },
-            --[[j_dw_vee = {
-                name = "Vee Version One",
-                text = {
-                    {
-                        "Adds a new scoring window",
-                    },
-                    {
-                        "Adds {X:dark_edition,C:white}(log(chips*mult)^0.1)-1{} to",
-                        "Vee's scoring window",
-                        "{C:green,s:0.85,E:1}#1#{}"
-                    }
-                }
-            },]]
-            j_dw_vee = {
-                name = "Vee",
-                text = {
-                    "{C:attention}Booster Packs{} have",
-                    "{C:attention}#2#{} extra items and",
-                    "allows {C:attention}#1#{} more item",
-                    "to be chosen",
+                    "{C:attention}+#1#{} consumable slots",
                 },
-                unlock = {
-                    "Skip a {C:attention}Mega",
-                    "{C:attention}Spectral Pack",
-                }
             },
-            j_dw_shelly = {
-                name = "Shelly Fossilian",
+
+            j_dw_ribecca = {
+                name = "Ribecca",
                 text = {
-                    "{X:dark_edition,C:white}X0.65{} Blind requirement",
-                    "for every {C:attention}Joker{} you have"
-                }
+                    "Adds {C:attention}double{} the rank of",
+                    "all {C:attention}Debuffed{} cards",
+                    "held in hand to Mult"
+                },
             },
-            j_dw_blot = {
-                name = "Blot",
+            j_dw_soulvester = {
+                name = "Soulvester",
                 text = {
-                    "{X:mult,C:white}^1.15{} Mult.",
-                    "Create Blot Jr. when a {C:attention}Boss Blind{} is defeated."
-                }
-            },
-            j_dw_blotjr = {
-                name = "Blot Jr.",
-                text = {
-                    "{X:mult,C:white}X1.25{} Mult.",
-                    "Destroyed after {C:attention}#1#{} Rounds."
-                }
-            },
-            j_dw_gigi = {
-                name = "Gigi",
-                text = {
-                    "Creates a random {C:attention}Joker{}",
-                    "or {C:tarot}Consumable{} when",
-                    "a {C:attentin}Blind{} is {C:attention}skipped{}"
-                }
-            },
-            j_dw_barnaby = {
-                name = "Barnaby Wilkers",
-                text = {
-                    "{X:dark_edition,C:white}^1.05{} Mult",
-                    "{C:red}Destoryed{} if Finn is removed",
-                    "{C:inactive}Cannot spawn if Finn is not in Joker slots{}"
-                }
-            },
-            j_dw_tw_shelly = {
-                name = "Twisted Shelly",
-                text = {
-                    "{X:default,C:attention}^0.8{} Score and {X:default,C:attention}^1.1{} Blind Requirement",
-                    "when a hand is played,",
-                    "{X:legendary,C:white}X2{} Chips and Mult for every {C:attention}Joker{}"
-                }
-            },
-            j_dw_connie = {
-                name = "Connie",
-                text = {
-                    "POSESSION!!!",
-                    "{C:red}Ability not implemented!{}"
-                }
-            },
-            j_dw_connie_alt = {
-                name = "Boolynski",
-                text = {
-                    "Gourdy, you can't deadname Connie like that!"
-                }
-            },
-            j_dw_tw_connie = {
-                name = "Twisted Connie",
-                text = {
-                    "Gains {X:blue,C:white}X#1#{} Chips",
-                    "for every {C:attention}Joker{} you have",
-                    "{C:inactive}( Currently{} {X:blue,C:white}X#2#{} {C:inactive}Chips ){}",
-                    "{C:inactive}( Currently{} {X:blue,C:white}/#3#{} {C:inactive}Mult ){}",
-                }
-            },
-            j_dw_ipadkid = {
-                name = "Toodles",
-                text = {
-                    {
-                        "{C:green}#2# in #3#{} Chance to {C:attention}retrigger 8s{} #1# times."
-                    },
-                    {
-                        "Gee I WONDER what her ability is referencing.",
-                        "- Isotypical"
-                    }
-                }
-            },
-            j_dw_rabid_kid = {
-                name = "Twisted Toodles",
-                text = {
-                    {
-                        "Retriggers {C:attention}all{} scored cards {C:attention}#1#{} times",
-                        "{C:attention}8s{} instead get retriggered {C:attention}#2#{} times"
-                    },
-                    {
-                        "Alright Isotypical, {C:red}pack it up{}",
-                        "with the {C:red}Almanac jokes.{}",
-                    }
-                }
+                    "{C:chips}+#1#{} Hand"
+                },
             },
             j_dw_eclipse = {
                 name = "Eclipse",
@@ -365,10 +507,24 @@ return {
                     "{C:attention}Create{} another when {C:attention}Boss Blind{} is defeated"
                 }
             },
-            --[[
-            YOU. ARE. A. MINOR!!!
-            also gonna add a prevention to weird mods like hotpot (nursery) and birthlatro
-            ]]
+
+            j_dw_ginger = {
+                name = "Ginger",
+                text = {
+                    "{C:chips}+#1#{} Hands if {C:attention}Blind",
+                    "is selected with",
+                    "{C:money}$#2#{} or more",
+                },
+            },
+            j_dw_coal = {
+                name = "Coal",
+                text = {
+                    "{C:green}#1# in #2#{} chance for each",
+                    "{C:attention}Stone{} card held in hand",
+                    "to create a {C:tarot}Tarot{} card",
+                },
+            },
+
             j_dw_iso = {
                 name = "Solinium (Toon-ified)",
                 text = {
@@ -445,38 +601,6 @@ return {
                     "Prevents {C:attention}Twisted Debuffs{} from applying"
                 }
             },
-            j_dw_pebble = {
-                name = "Pebble",
-                text = {
-                    "Halves {C:attention}Blind{}",
-                    "requirement",
-                },
-                unlock = {
-                    "Discover through",
-                    "the {C:attention}Ticket Tag"
-                },
-            },
-            j_dw_brick = {
-                name = "Brick",
-                text = {
-                    "{X:default,C:white}X0.8{} Chips and Mult"
-                }
-            },
-            j_dw_rodger = {
-                name = "Rodger",
-                text = {
-                    "Every Joker gives {X:red,C:white}X1.1{} Mult",
-                    "{C:inactive}Some blinds give jokers now...{}"
-                }
-            },
-            j_dw_eggson = {
-                name = "Eggson",
-                text = {
-                    "im old!",
-                    "Gives {C:attention}1/10th{} of {C:attention}Blind Requirement{}",
-                    "as {C:chips}+Chips{}"
-                }
-            }
         },
         Other = {},
         item = {
@@ -682,13 +806,19 @@ return {
 
             k_gourdyspeak1 = "Yay!! Hehehe!",
             k_gourdyspeak2 = "Trick or Treat!",
+            
+            k_dw_main = "Main",
 
             dw_rnd_odd = 'Odd',
             dw_rnd_even = 'Even',
 
+            dw_options_apply = "Apply Changes",
+
         },
         high_scores = {},
         labels = {
+            dw_main = "Main",
+
             dw_trinketjoker = "Trinket",
             dw_itemjoker = "Item",
             dw_twisted_common = "Twisted Common",

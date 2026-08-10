@@ -1,3 +1,7 @@
+--[[
+    Disable in weird mods like hotpot (nursery) and birthlatro
+]]
+
 SMODS.Joker {
     key = "ipadkid",
     config = { extra = { odds = 8, repetitions = 8 } },

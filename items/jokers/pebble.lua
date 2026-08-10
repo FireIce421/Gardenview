@@ -16,7 +16,7 @@ SMODS.Joker {
     perishable_compat = true,
     unlocked = false,
     calculate = function(self, card, context)
-        if context.first_hand_drawn then
+        if context.setting_blind then
             return {
                 xblindsize = card.ability.extra.xblindsize,
                 remove_default_message = true,
@@ -25,6 +25,9 @@ SMODS.Joker {
                 colour = G.C.TEXT_UI_DARK,
             }
         end
+    end,
+    loc_vars = function(self, info_queue, card)
+        return { vars = {card.ability.extra.xblindsize}}
     end,
     check_for_unlock = function(self, args)
         return args.type == 'dw_pebble'

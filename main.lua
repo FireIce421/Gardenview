@@ -60,74 +60,30 @@ SMODS.Font({
     DESCSCALE = 1                   -- Description scale (default: 1)
 })
 
-local src = NFS.getDirectoryItems(SMODS.current_mod.path .. "items/jokers/")
-for _, file in ipairs(src) do
-    assert(SMODS.load_file("items/jokers/" .. file))()
-end
-
-
-local function blindbs()
+local function load_from_folder(path, all_items)
     local mod_path = SMODS.current_mod.path
-    local blinds = mod_path .. "items/blinds"
-    local files = NFS.getDirectoryItemsInfo(blinds)
+    local blinds = mod_path .. path .. "/"
+
+    local files
+    if all_items then
+        files = NFS.getDirectoryItems(blinds)
+    else   
+        files = NFS.getDirectoryItemsInfo(blinds)
+    end
+
     for i = 1, #files do
         local file_name = files[i].name
         if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("items/blinds/" .. file_name))()
+            assert(SMODS.load_file(path .. "/" .. file_name))()
         end
     end
 end
 
-local function misc()
-    local mod_path = SMODS.current_mod.path
-    local blinds = mod_path .. "items/misc"
-    local files = NFS.getDirectoryItemsInfo(blinds)
-    for i = 1, #files do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("items/misc/" .. file_name))()
-        end
-    end
-end
-
-local function consume()
-    local mod_path = SMODS.current_mod.path
-    local blinds = mod_path .. "items/consumables"
-    local files = NFS.getDirectoryItemsInfo(blinds)
-    for i = 1, #files do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("items/consumables/" .. file_name))()
-        end
-    end
-end
-
-local function tag()
-    local mod_path = SMODS.current_mod.path
-    local blinds = mod_path .. "items/tags"
-    local files = NFS.getDirectoryItemsInfo(blinds)
-    for i = 1, #files do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("items/tags/" .. file_name))()
-        end
-    end
-end
-
-local function trinketjoker()
-    local mod_path = SMODS.current_mod.path
-    local blinds = mod_path .. "items/trinkets"
-    local files = NFS.getDirectoryItemsInfo(blinds)
-    for i = 1, #files do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("items/trinkets/" .. file_name))()
-        end
-    end
-end
-
-tag()
-blindbs()
-consume()
-misc()
-trinketjoker()
+assert(SMODS.load_file("ui.lua"))()
+load_from_folder("items/rarity") -- Rarities
+load_from_folder("items/jokers") -- Jokers
+load_from_folder("items/blinds") -- Blinds
+load_from_folder("items/consumables") -- Consumables
+load_from_folder("items/tags") -- Tags
+load_from_folder("items/trinkets") -- Trinkets
+load_from_folder("items/misc") -- Misc

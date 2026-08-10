@@ -58,3 +58,23 @@ SMODS.Joker{
         return {vars = {5}}
     end,
 }
+
+local calculate_ref = SMODS.current_mod.calculate
+function SMODS.current_mod.calculate(self, context)
+    calculate_ref(self, context)
+
+    if not G.P_CENTERS.j_dw_brightney.unlocked then
+        if context.press_play then
+            local count = 0
+            for _,v in ipairs(G.hand.highlighted) do
+                if v.facing == 'back' then
+                    count = count + 1
+                end
+            end
+            
+            if count == 5 then
+                check_for_unlock{type = 'dw_brightney'}
+            end
+        end
+    end
+end
