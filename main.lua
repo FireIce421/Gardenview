@@ -26,6 +26,14 @@ SMODS.Atlas {
     path = 'dwTags.png'
 }
 
+SMODS.Atlas{
+    key = 'dwBlind',
+    path = "dwBlinds.png",
+    atlas_table = 'ANIMATION_ATLAS',
+    frames = 1,
+    px = 34,
+    py = 34
+}
 
 SMODS.Atlas {
     key = 'isojoker',
@@ -80,6 +88,8 @@ local function load_from_folder(path, all_items)
 end
 
 function SMODS.current_mod.calculate(self, context)
+end
+function SMODS.current_mod.reset_game_globals(run_start)
 end
 
 assert(SMODS.load_file("ui.lua"))()

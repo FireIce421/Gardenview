@@ -17,7 +17,279 @@ return {
                     "Flips all Jokers",
                     "Cards are drawn face down"
                 }
-            }
+            },
+            bl_dw_boxten = {
+                name = "Twisted Boxten",
+                text = {
+                    "Played Hearts and Diamonds",
+                    "do not score Chips"
+                },
+            },
+            bl_dw_brusha = {
+                name = "Twisted Brusha",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_cosmo = {
+                name = "Twisted Cosmo",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_looey = {
+                name = "Twisted Looey",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_poppy = {
+                name = "Twisted Poppy",
+                text = {
+                    "Played Spades and Clubs",
+                    "do not score Chips"
+                },
+            },
+            bl_dw_shrimpo = {
+                name = "Twisted Shrimpo",
+                text = {
+                    "One random card",
+                    "played is debuffed",
+                },
+            },
+            bl_dw_tisha = {
+                name = "Twisted Tisha",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_yatta = {
+                name = "Twisted Yatta",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_brightney = {
+                name = "Twisted Brightney",
+                text = {
+                    "Flips all cards in hand",
+                    "after each hand played"
+                },
+            },
+            bl_dw_connie = {
+                name = "Twisted Connie",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_finn = {
+                name = "Twisted Finn",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_razzledazzle = {
+                name = "Twisted RnD",
+                text = {
+                    "Alternates between debuffing",
+                    "Hearts and Diamonds or",
+                    "Spades and Clubs each hand",
+                },
+            },
+            bl_dw_rodger = {
+                name = "Twisted Rodger",
+                text = {
+                    "Cannot play a random",
+                    "poker hand. Pay attention!"
+                },
+            },
+            bl_dw_teagan = {
+                name = "Twisted Teagan",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_toodles = {
+                name = "Twisted Toodles",
+                text = {
+                    "Start with half",
+                    "of your hands"
+                },
+            },
+            bl_dw_blot = {
+                name = "Twisted Blot",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_flutter = {
+                name = "Twisted Flutter",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_gigi = {
+                name = "Twisted Gigi",
+                text = {
+                    "After play or discard,",
+                    'destroys a random',
+                    'Consumable',
+                },
+            },
+            bl_dw_glisten = {
+                name = "Twisted Glisten",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_goob = {
+                name = "Twisted Goob",
+                text = {
+                    "Destroys 1 random",
+                    'card in played hand'
+                },
+            },
+            bl_dw_scraps = {
+                name = "Twisted Scraps",
+                text = {
+                    "Destroys 1 random",
+                    'card held in hand'
+                },
+            },
+            bl_dw_squirm = {
+                name = "Twisted Squirm",
+                text = {
+                    "Targets a random Joker",
+                    "Target destroyed when",
+                    "defeated unless hand",
+                    "score reaches #1#",
+                }
+            },
+            bl_dw_astro = {
+                name = "Astro's Nightmare",
+                text = {
+                    "Discards all cards",
+                    "per hand played"
+                },
+            },
+            bl_dw_pebble = {
+                name = "Vicious Pebble",
+                text = {
+                    "Base Chips and",
+                    "Mult set to 1"
+                },
+            },
+            bl_dw_shelly = {
+                name = "Forgotten Fossillian",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_sprout = {
+                name = "Sprout's Catastrophe",
+                text = {
+                    "All cards do",
+                    "not score Chips"
+                },
+            },
+            bl_dw_vee = {
+                name = "Vee's Gameshow",
+                text = {
+                    "All cards face down",
+                    "After play or discard",
+                    "reveal 3 random cards"
+                },
+            },
+            bl_dw_eggson = {
+                name = "Twisted Eggson",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_flyte = {
+                name = "Twisted Flyte",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_cocoa = {
+                name = "Twisted Cocoa",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_bassie = {
+                name = "Bassie's Gardens",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_ribecca = {
+                name = "Twisted Ribecca",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_soulvester = {
+                name = "Twisted Soulvester",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_eclipse = {
+                name = "Twisted Eclipse",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_gourdy = {
+                name = "Forgotten Gourdy",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_rudie = {
+                name = "Twisted Rudie",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_ginger = {
+                name = "Twisted Ginger",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_coal = {
+                name = "Twisted Coal",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_bobette = {
+                name = "Bobette's Workshop",
+                text = {
+                    "Incomplete"
+                },
+            },
+            bl_dw_dandy = {
+                name = "Dandicus Dancifer",
+                text = {
+                    "1 Hand, 0 Discards,",
+                    "+6 Hand Size",
+                },
+            },
+            bl_dw_dyle = {
+                name = "Dyle Timesly",
+                text = {
+                    "Extremely Large Blind",
+                },
+            },
+            bl_dw_blotjr = {
+                name = "Blot Jr",
+                text = {
+                },
+            },
         },
         Edition = {},
         Enhanced = {},
@@ -724,7 +996,16 @@ return {
             }
         },
         Tarot = {},
-        Voucher = {},
+        Voucher = {
+            v_dw_timesup = {
+                name = "TIME'S UP",
+                text = {
+                    "Boss Blind becomes {C:red}Lethal",
+                    "Creates a powerful {C:attention}Joker{}",
+                    "when defeated",
+                },
+            },
+        },
         Other = {
             dw_onfire = {
                 name = "Hand On Fire",
@@ -806,6 +1087,11 @@ return {
             k_dw_dandy_stage3_buy_4 = "Good choice on your part.",
             k_dw_dandy_stage3_buy_5 = "About time.",
             k_dw_dandy_stage3_buy_6 = "Heh, you had me worried there for a second.",
+            
+            ph_dw_stage1 = "Spare some, will ya?",
+            ph_dw_stage2 = "Don't Ignore Me!",
+            ph_dw_stage3 = "Be that way...",
+            ph_dw_stage4 = "...",
 
             k_candy = "Candy",
             b_candy_cards = "Candies",
@@ -835,6 +1121,7 @@ return {
         high_scores = {},
         labels = {
             dw_main = "Main",
+            dw_lethal = "Lethal",
 
             dw_trinketjoker = "Trinket",
             dw_itemjoker = "Item",
@@ -842,7 +1129,7 @@ return {
             dw_twisted_uncommon = "Twisted Uncommon",
             dw_twisted_rare = "Twisted Rare",
             dw_twisted_legendary = "Twisted Legendary",
-            dw_twisted_lethal = "Lethal",
+            dw_twisted_lethal = "Twisted Lethal",
             dw_omega = "Absurd",
             dw_fatal = "Fatal"
         },

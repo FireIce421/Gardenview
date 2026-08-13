@@ -1,6 +1,7 @@
 SMODS.Joker {
     key = 'dyle',
-    cost = 30,
+    rarity = 'dw_lethal',
+    cost = 40,
     rarity = 4,
     config = {
         extra = {

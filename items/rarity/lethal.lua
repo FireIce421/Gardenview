@@ -10,7 +10,7 @@ SMODS.Gradient {
 
 -- Lethal Rarity
 SMODS.Rarity {
-    key = 'leader',
+    key = 'lethal',
     badge_colour = SMODS.Gradients["dandy_lethal_gradient"],
     default_weight = 0
 }

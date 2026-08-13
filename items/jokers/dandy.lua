@@ -1,5 +1,6 @@
 SMODS.Joker {
     key = 'dandy',
+    rarity = 'dw_lethal',
     cost = 40,
     rarity = 4,
     config = {
