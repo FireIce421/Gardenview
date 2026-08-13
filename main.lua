@@ -79,6 +79,9 @@ local function load_from_folder(path, all_items)
     end
 end
 
+function SMODS.current_mod.calculate(self, context)
+end
+
 assert(SMODS.load_file("ui.lua"))()
 load_from_folder("items/rarity") -- Rarities
 load_from_folder("items/jokers") -- Jokers

@@ -190,10 +190,17 @@ return {
             j_dw_finn = {
                 name = "Finn",
                 text = {
-                    "{C:red}+50{} Mult",
-                    "At the end of the round,",
-                    "{X:red,C:white}X3{} Mult for {C:blue}1 hand{}",
-                    "{C:inactive}#1#{}"
+                    "Gives {C:money}$#1#{} if played",
+                    "hand is {C:attention}on fire"
+                }
+            },
+            j_dw_glisten = {
+                name = "Glisten",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if a {C:attention}Joker",
+                    "is to the right",
+                    "Gains {X:mult,C:white}X#2#{} Mult",
+                    "otherwise"
                 }
             },
             --[[j_dw_vee = {
@@ -319,16 +326,13 @@ return {
                 },
             },
             j_dw_astro = {
-                name = 'Astro Novalite',
+                name = 'Astro',
                 text = {
                     {
-                        "Adds {C:blue}+#2#{}",
-                        "{C:blue}Hands{} and {C:red}Discards{}",
-                        "when {C:attention}Blind{} is selected"
-                    },
-                    {
-                        "Each unique {C:planet}Planet{} used",
-                        "gives +1 additional Hands and Discards"
+                        "Gains {C:chips}+#1#{} Hand for",
+                        "every #2# {C:planet}Planet",
+                        "cards used {C:inactive}(#3#/#2#)",
+                        "{C:inactive}(Currently {C:chips}+#4#{C:inactive} hands)"
                     }
                 }
             },
@@ -336,15 +340,12 @@ return {
                 name = 'Astro?',
                 text = {
                     {
-                        "Adds {C:blue}+#2#{}",
-                        "{C:blue}Hands{} and {C:red}Discards{}",
-                        "when {C:attention}Blind{} is selected",
+                        "Gains {C:chips}+#1#{} Hand for",
+                        "every #2# {C:planet}Planet{} cards",
+                        "used {C:inactive}(#3#/#2#)",
+                        "{C:inactive}(Currently {C:chips}+#4#{C:inactive} hands)",
                         "{C:inactive}Something's wrong here.{}"
-                    },
-                    {
-                        "Each unique {C:planet}Planet{} used",
-                        "gives +1 additional Hands and Discards"
-                    },
+                    }
                 }
             },
             j_dw_twistedastro = {
@@ -501,11 +502,17 @@ return {
                 }
             },
             j_dw_gourdy = {
+                --[[
                 name = "Gourdy Holloway",
                 text = {
                     "{C:attention}Create{} a random Consumable at the end of round.",
                     "{C:attention}Create{} another when {C:attention}Boss Blind{} is defeated"
-                }
+                }]]
+                name = "Gourdy",
+                text = {
+                    "Each {C:attention}Joker{} gives {C:chips}+#1#{} Chips,",
+                    "{C:mult}+#2#{} Mult or {X:mult,C:white}X#3#{} Mult"
+                },
             },
 
             j_dw_ginger = {
@@ -718,6 +725,16 @@ return {
         },
         Tarot = {},
         Voucher = {},
+        Other = {
+            dw_onfire = {
+                name = "Hand On Fire",
+                text = {
+                    "Occurs when {C:attention}played hand",
+                    "scores greater than the",
+                    "{C:blind}Blind size{}"
+                },
+            },
+        },
     },
     misc = {
         achievement_descriptions = {},

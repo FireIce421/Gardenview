@@ -4,47 +4,26 @@ SMODS.Joker {
     rarity = 2,
     config = {
         extra = {
-            active = 'Inactive'
+            dollars = 10
         }
     },
-    atlas = 'dw',
-    pos = {x=8,y=0},
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.active } }
-    end,
+    atlas = 'dwJoker',
+    pos = {x=0,y=5},
+
     blueprint_compat = true,
 
-    add_to_deck = function(self,card,from_debuff)
-        G.GAME.pool_flags.dw_barnaby_spawnable = true
-    end,
-
-    remove_from_deck = function(self, card, from_debuff)
-        if next(SMODS.find_card("j_dw_barnaby")) then
-            SMODS.destroy_cards(SMODS.find_card("j_dw_barnaby"))
-        end
-        G.GAME.pool_flags.dw_barnaby_spawnable = true
-    end,
-
     calculate = function(self, card, context)
-        if context.joker_main and card.ability.extra.active == 'Inactive' then
+        if context.after and SMODS.calculate_round_score() >= G.GAME.blind.chips then -- Checks if hand is on fire
             return {
-                mult = 50
-            }
-        elseif context.joker_main and card.ability.extra.active == 'Active' then
-            return {
-                xmult = 3
+                dollars = card.ability.extra.dollars
             }
         end
-        if context.final_scoring_step and not context.blueprint then
-            card.ability.extra.active = "Inactive"
-        end
-        if context.end_of_round and context.game_over == false and not context.blueprint then
-            card.ability.extra.active = "Active"
-            return {
-                message = localize("k_dw_finn_complete" .. pseudorandom("finntastic", 1, 4))
-            }
-        end
-    end
+    end,
+
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = {set = "Other", key = "dw_onfire" } -- Adds the popup
+        return { vars = { card.ability.extra.dollars } }
+    end,
 }
 
 SMODS.Joker {
