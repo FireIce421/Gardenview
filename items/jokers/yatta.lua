@@ -19,15 +19,15 @@ SMODS.Joker {
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             SMODS.add_card {
-                                set = 'Spectral',
+                                set = 'dw_candy',
                                 edition = 'e_negative'
                             }
                             SMODS.add_card {
-                                set = 'Spectral',
+                                set = 'dw_candy',
                                 edition = 'e_negative'
                             }
                             SMODS.add_card {
-                                set = 'Spectral',
+                                set = 'dw_candy',
                                 edition = 'e_negative'
                             }
                             G.GAME.consumeable_buffer = 0

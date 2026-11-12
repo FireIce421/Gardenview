@@ -9,7 +9,7 @@ SMODS.Joker {
     atlas = 'dwJoker',
     pos = { x = 9, y = 6 },
     soul_pos = nil,
-    rarity = 'dw_main',
+    rarity = 3,
     cost = 20,
     config = { extra = { choice_mod = 1, size_mod = 2 } },
     blueprint_compat = false,
@@ -52,7 +52,7 @@ SMODS.Joker {
         end
     end,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.choice_mod, card.ability.extra.size_mod }, key = self.key }
+        return { vars = { card.ability.extra.choice_mod, card.ability.extra.size_mod, localize('k_dw_veespeak' .. pseudorandom("tv", 1, 4)) }, key = self.key }
     end,
     check_for_unlock = function(self, args)
         return args.type == 'dw_vee'

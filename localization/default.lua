@@ -1,6 +1,14 @@
 return {
     descriptions = {
-        Back = {},
+        Back = {
+            b_dw_gameshow = {
+                name = "Gameshow Deck",
+                text = {
+                    "Allows for the {C:dw_points}Points{}",
+                    "Operand to be used in scoring"
+                }
+            }
+        },
         Blind = {
             bl_dw_TIMES_UP = {
                 name = "TIME'S UP",
@@ -453,10 +461,12 @@ return {
             },
             j_dw_yatta = {
                 name = "Yatta",
-                text = {
+                text = { {
                     "Gives 3 Candy Consumables",
                     "when a {C:attention}Boss Blind{} is defeated.",
+                },{
                     "{C:blue,s:0.8}#1#{}"
+                }
                 }
             },
             j_dw_finn = {
@@ -665,12 +675,15 @@ return {
                 }
             },
             j_dw_vee = {
-                name = "Vee",
-                text = {
+                name = "Vee Version One",
+                text = { {
                     "{C:attention}Booster Packs{} have",
                     "{C:attention}#2#{} extra items and",
                     "allows {C:attention}#1#{} more item",
                     "to be chosen",
+                    },{
+                    "{E:1,C:green,s:0.7}#3#{}"
+                    }
                 },
                 unlock = {
                     "Skip a {C:attention}Mega",
@@ -991,7 +1004,7 @@ return {
                 text = {
                     "Upon obtaining, immediately",
                     "uses up 1 heart {C:inactive}(If Possible){}",
-                    "If you have 3 Ichor Hearts, die."
+                    "If you have 3 Ichor Hearts, {C:red}die{}"
                 }
             }
         },
@@ -1099,6 +1112,9 @@ return {
             b_item_cards = "Items",
             k_trinket = "Trinket",
             b_trinket_cards = "Trinkets",
+            k_trick = "Trick",
+            k_treat = "Treat",
+            b_trickortreat = "Tricks/Treats",
 
             k_toodles_speak1 = "Hehehe!",
             k_toodles_speak2 = "Here I go!",

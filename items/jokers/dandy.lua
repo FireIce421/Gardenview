@@ -102,37 +102,3 @@ SMODS.Joker {
         end
     end
 }
-
-SMODS.Joker {
-    key = 'tw_dandy',
-    cost = 10,
-    rarity = 'dw_twisted_lethal',
-    config = {
-        extra = {
-            xmult = 1,
-            wake_up_its_talisman_check_time = 0.05
-        },
-    },
-    atlas = 'dw',
-    pos = { x = 8, y = 0 },
-    blueprint_compat = true,
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.xmult, card.ability.extra.wake_up_its_talisman_check_time * math.max(0, (G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0)) + 1 } }
-    end,
-    calculate = function(self, card, context)
-        if context.buying_card and not context.blueprint then
-            card.ability.extra.xmult = card.ability.extra.xmult + 1
-            return { message = "X" .. tostring(card.ability.extra.xmult) .. " Mult" }
-        end
-        if context.joker_main then
-            return {
-                xmult = card.ability.extra.xmult,
-                emult = card.ability.extra.wake_up_its_talisman_check_time *
-                    math.max(0, (G.GAME.dollars or 0) + (G.GAME.dollar_buffer or 0)) + 1
-            }
-        end
-        if context.end_of_round and context.game_over == false and context.main_eval and context.beat_boss and not context.blueprint then
-            G.GAME.dollars = G.GAME.dollars / 2
-        end
-    end
-}

@@ -1,3 +1,6 @@
+Gardenview = SMODS.current_mod
+GRDNVW_UTIL = {}
+
 SMODS.Atlas {
     key = 'modicon',
     px = 34,
@@ -58,8 +61,8 @@ SMODS.Atlas {
 }
 
 SMODS.Font({
-    key = 'balling',
-    path = 'dwfont.ttf ',
+    key = 'fredokaone',
+    path = 'dwfont.ttf',
     render_scale = 200,             -- Base size in pixels (default: 200)
     TEXT_HEIGHT_SCALE = 0.83,       -- Line spacing (default: 0.83)
     TEXT_OFFSET = { x = 0, y = 0 }, -- Alignment tweak (default: {0,0})
@@ -93,6 +96,7 @@ function SMODS.current_mod.reset_game_globals(run_start)
 end
 
 assert(SMODS.load_file("ui.lua"))()
+load_from_folder("items/backs") -- Decks
 load_from_folder("items/rarity") -- Rarities
 load_from_folder("items/jokers") -- Jokers
 load_from_folder("items/blinds") -- Blinds
@@ -100,3 +104,8 @@ load_from_folder("items/consumables") -- Consumables
 load_from_folder("items/tags") -- Tags
 load_from_folder("items/trinkets") -- Trinkets
 load_from_folder("items/misc") -- Misc
+
+Gardenview.Colours = {
+    points = darken(HEX("b4f2b6"), 0.2),
+}
+for key, value in pairs(Gardenview.Colours) do G.ARGS.LOC_COLOURS['dw_' .. key:lower()] = value end

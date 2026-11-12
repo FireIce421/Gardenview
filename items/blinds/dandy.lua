@@ -1,4 +1,4 @@
-SMODS.Sound {
+ --[[ SMODS.Sound {
     key = 'dandy_music',
     path = 'dw_mus_dandy.ogg',
     pitch = 1,
@@ -99,7 +99,7 @@ function SMODS.current_mod.calculate(self, context)
                     SMODS.pseudorandom_probability(self, 'dw_twisted_dandy', numerator, denominator))
                 then
                     print("Twisted Dandy Spawned")
-                    G.GAME.perscribed_bosses[G.GAME.round_resets.ante] = 'bl_dandy_dandy'
+                    G.GAME.perscribed_bosses[G.GAME.round_resets.ante] = 'bl_dw_dandy'
                     G.FUNCS.reroll_boss()
                 end
             end
@@ -118,4 +118,6 @@ G.FUNCS.use_card = function(e, mute, nosave)
         })
     end
     return result
-end
+end ]]
+
+-- hallo boss, ye fireice fireice, i have a problem, yes, yes yes, lorey - start, no problem, drive 1 2 3 k k problem yes
