@@ -98,12 +98,13 @@ end
 assert(SMODS.load_file("ui.lua"))()
 load_from_folder("items/backs") -- Decks
 load_from_folder("items/rarity") -- Rarities
-load_from_folder("items/jokers") -- Jokers
 load_from_folder("items/blinds") -- Blinds
 load_from_folder("items/consumables") -- Consumables
 load_from_folder("items/tags") -- Tags
 load_from_folder("items/trinkets") -- Trinkets
 load_from_folder("items/misc") -- Misc
+
+assert(SMODS.load_file("load/jokers.lua"))() -- Jokers
 
 Gardenview.Colours = {
     points = darken(HEX("b4f2b6"), 0.2),

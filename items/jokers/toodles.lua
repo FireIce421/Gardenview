@@ -1,12 +1,8 @@
---[[
-    Disable in weird mods like hotpot (nursery) and birthlatro
-]]
-
 SMODS.Joker {
-    key = "ipadkid",
+    key = "toodles",
     config = { extra = { odds = 8, repetitions = 8 } },
-    atlas = 'dw',
-    pos = { x = 0, y = 2 },
+    atlas = 'dwJoker',
+    pos = { x = 3, y = 6},
     soul_pos = { x = 1, y = 2 },
     rarity = 2,
     loc_vars = function(self, info_queue, card)

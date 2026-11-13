@@ -557,16 +557,17 @@ return {
                     "{C:inactive}( Currently{} {X:blue,C:white}/#3#{} {C:inactive}Mult ){}",
                 }
             },
-            j_dw_ipadkid = {
+
+            j_dw_toodles = {
                 name = "Toodles",
                 text = {
                     {
                         "{C:green}#2# in #3#{} Chance to {C:attention}retrigger 8s{} #1# times."
                     },
-                    {
-                        "Gee I WONDER what her ability is referencing.",
-                        "- Isotypical"
-                    }
+                    --[[
+                        Gee I WONDER what her ability is referencing.
+                        - Isotypical
+                    ]]
                 }
             },
             j_dw_rabid_kid = {
