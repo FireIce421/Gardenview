@@ -1,15 +1,14 @@
 SMODS.Joker {
     key = 'dyle',
     rarity = 'dw_lethal',
+    atlas = 'dwJoker',
+    pos = { x = 9, y = 7 },
     cost = 40,
-    rarity = 4,
     config = {
         extra = {
             xmult = 1
         }
     },
-    atlas = 'dw',
-    pos = {x=8,y=0},
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult } }
     end,
@@ -23,10 +22,4 @@ SMODS.Joker {
             }
         end
     end
-}
-
-SMODS.Joker {
-    key = 'tw_dyle_bl',
-    cost = -1,
-    rarity = 'dw_detrimental',
 }

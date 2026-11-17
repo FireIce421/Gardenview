@@ -3,7 +3,6 @@ SMODS.Joker {
     config = { extra = { odds = 8, repetitions = 8 } },
     atlas = 'dwJoker',
     pos = { x = 3, y = 6},
-    soul_pos = { x = 1, y = 2 },
     rarity = 2,
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_dw_toodles')

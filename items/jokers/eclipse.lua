@@ -2,8 +2,8 @@ SMODS.Joker {
     key = "eclipse",
     rarity = 2,
     cost = 8,
-    atlas = 'dw',
-    pos = { x = 8, y = 0 },
+    atlas = 'dwJoker',
+    pos = { x = 6, y = 9 }, --nice
     config = {
         extra = {
             odds_boss = 8,

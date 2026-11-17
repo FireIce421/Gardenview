@@ -17,7 +17,7 @@ SMODS.Sound ({
 SMODS.Joker {
     key = "gourdy",
     cost = 20,
-    rarity = 2,
+    rarity = "dw_main",
     atlas = 'dw',
     pos = {x=0,y=1},
     soul_pos = {x=1,y=1},

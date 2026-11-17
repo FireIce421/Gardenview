@@ -2,7 +2,6 @@ SMODS.Joker {
     key = 'dandy',
     rarity = 'dw_lethal',
     cost = 40,
-    rarity = 4,
     config = {
         extra = {
             xmult = 1,
@@ -11,9 +10,9 @@ SMODS.Joker {
             lockedin = false
         }
     },
-    atlas = 'dw',
-    pos = {x=2,y=2},
-    soul_pos = {x=3,y=2},
+    atlas = 'dwJoker',
+    pos = { x = 8, y = 7 },
+    soul_pos = { x = 8, y = 8 },
     blueprint_compat = true,
     update = function(self, card, dt)
         if card.ability.extra.anger >= 2 then

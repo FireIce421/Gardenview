@@ -367,6 +367,15 @@ return {
                     "that are face down",
                 },
             },
+            j_dw_flutter = {
+                name = "Flutter",
+                text = {
+                    "..."
+                },
+                unlock = {
+                    "!!!"
+                },
+            },
             j_dw_razzledazzle = {
                 name = "Razzle & Dazzle",
                 text = {
@@ -443,6 +452,12 @@ return {
                 text = {
                     "All other {C:attention}Jokers{}",
                     "score {C:chips}+#1#{} Chips",
+                },
+            },
+            j_dw_brusha = {
+                name = "Brusha",
+                text = {
+                    "divorced"
                 },
             },
             j_dw_waxwell = {
@@ -660,6 +675,14 @@ return {
                     }
                 }
             },
+            j_dw_sprout = {
+                name = "Sprout",
+                text = {
+                    "{C:chips}+#2#{} Hand for",
+                    "each {C:money}$#3#{} owned",
+                    "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Hands)"
+                },
+            },
             j_dw_shelly = {
                 name = "Shelly",
                 text = {
@@ -758,6 +781,22 @@ return {
                     "{C:attention}Blind Size{} as {C:chips}Chips{}"
                 }
             },
+            j_dw_flyte = {
+                name = 'Flyte',
+                text = {
+                    {
+                        "i just wanted to help"
+                    }
+                }
+            },
+            j_dw_cocoa = {
+                name = 'Cocoa',
+                text = {
+                    {
+                        "no main"
+                    }
+                }
+            },
             j_dw_bassie = {
                 name = "Bassie",
                 text = {
@@ -800,7 +839,15 @@ return {
                     "{C:mult}+#2#{} Mult or {X:mult,C:white}X#3#{} Mult"
                 },
             },
-
+            
+            j_dw_rudie = {
+                name = 'Rudie',
+                text = {
+                    {
+                        "critmas"
+                    }
+                }
+            },
             j_dw_ginger = {
                 name = "Ginger",
                 text = {
@@ -816,6 +863,14 @@ return {
                     "{C:attention}Stone{} card held in hand",
                     "to create a {C:tarot}Tarot{} card",
                 },
+            },
+            j_dw_bobette = {
+                name = 'Bobette',
+                text = {
+                    {
+                        "she saw the horrors"
+                    }
+                }
             },
 
             j_dw_iso = {

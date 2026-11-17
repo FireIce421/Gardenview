@@ -1,5 +1,7 @@
 SMODS.Joker {
-    key = 'rudie',
-    rarity = 1,
+    key = 'bobette',
+    atlas = 'dwJoker',
+    pos = { x = 7, y = 8},
+    rarity = "dw_main",
     cost = 10
 }
