@@ -370,11 +370,8 @@ return {
             j_dw_flutter = {
                 name = "Flutter",
                 text = {
-                    "..."
-                },
-                unlock = {
-                    "!!!"
-                },
+                    "{X:mult,C:white}INCOMPLETE"
+                }
             },
             j_dw_razzledazzle = {
                 name = "Razzle & Dazzle",
@@ -457,13 +454,13 @@ return {
             j_dw_brusha = {
                 name = "Brusha",
                 text = {
-                    "divorced"
+                    "{X:mult,C:white}INCOMPLETE"
                 },
             },
             j_dw_waxwell = {
                 name = "Waxwell",
                 text = {
-                    "Hawt Saus"
+                    "{X:mult,C:white}INCOMPLETE"
                 },
             },
             j_dw_looey = {
@@ -545,9 +542,9 @@ return {
             j_dw_barnaby = {
                 name = "Barnaby Wilkers",
                 text = {
-                    "{X:dark_edition,C:white}^1.05{} Mult",
-                    "{C:red}Destoryed{} if Finn is removed",
-                    "{C:inactive}Cannot spawn if Finn is not in Joker slots{}"
+                    "Grants a {C:attention}Coupon Tag",
+                    "when cashing out with",
+                    "{C:money}$#1#{} or greater"
                 }
             },
             j_dw_connie = {
@@ -844,7 +841,7 @@ return {
                 name = 'Rudie',
                 text = {
                     {
-                        "critmas"
+                        "{X:mult,C:white}INCOMPLETE"
                     }
                 }
             },

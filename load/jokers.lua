@@ -26,13 +26,13 @@ assert(SMODS.load_file("items/jokers/rodger.lua"))()
 assert(SMODS.load_file("items/jokers/tisha.lua"))()
 assert(SMODS.load_file("items/jokers/brusha.lua"))()
 assert(SMODS.load_file("items/jokers/finn.lua"))()
--- Barnaby Wilkers
+assert(SMODS.load_file("items/jokers/barnaby.lua"))()
 assert(SMODS.load_file("items/jokers/teagan.lua"))()
 
 assert(SMODS.load_file("items/jokers/looey.lua"))()
 assert(SMODS.load_file("items/jokers/yatta.lua"))()
 assert(SMODS.load_file("items/jokers/blot.lua"))()
--- Blot Jr.
+assert(SMODS.load_file("items/jokers/blotjr.lua"))()
 assert(SMODS.load_file("items/jokers/gigi.lua"))()
 
 -- TOONS: PAGE 2
@@ -59,6 +59,7 @@ assert(SMODS.load_file("items/jokers/goob.lua"))()
 assert(SMODS.load_file("items/jokers/scraps.lua"))()
 assert(SMODS.load_file("items/jokers/waxwell.lua"))()
 assert(SMODS.load_file("items/jokers/glisten.lua"))()
+assert(SMODS.load_file("items/jokers/bassie.lua"))()
 
 assert(SMODS.load_file("items/jokers/pebble.lua"))()
 assert(SMODS.load_file("items/jokers/astro.lua"))()
@@ -66,8 +67,11 @@ assert(SMODS.load_file("items/jokers/sprout.lua"))()
 assert(SMODS.load_file("items/jokers/shelly.lua"))()
 assert(SMODS.load_file("items/jokers/vee.lua"))()
 
-assert(SMODS.load_file("items/jokers/bassie.lua"))()
 if allow_children then assert(SMODS.load_file("items/jokers/gourdy.lua"))() end
 assert(SMODS.load_file("items/jokers/bobette.lua"))()
 assert(SMODS.load_file("items/jokers/dandy.lua"))()
 assert(SMODS.load_file("items/jokers/dyle.lua"))()
+assert(SMODS.load_file("items/jokers/dessa.lua"))()
+
+-- TOONS: PAGE 4
+assert(SMODS.load_file("items/jokers/dioda.lua"))()

@@ -3,5 +3,8 @@ SMODS.Joker {
     rarity = 1,
     atlas = 'dwJoker',
     pos = { x = 4, y = 8},
-    cost = 10
+    cost = 10,
+    in_pool = function(self, args)
+        return false
+    end,
 }

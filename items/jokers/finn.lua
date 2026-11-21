@@ -25,22 +25,3 @@ SMODS.Joker {
         return { vars = { card.ability.extra.dollars } }
     end,
 }
-
-SMODS.Joker {
-    key = "barnaby",
-    cost = 14,
-    rarity = 3,
-    atlas = 'dw',
-    pos = {x=8,y=0},
-    blueprint_compat = true,
-    in_pool = function(self,args)
-        return G.GAME.pool_flags.dw_barnaby_spawnable
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main then
-            return {
-                emult = 1.05
-            }
-        end
-    end
-}
