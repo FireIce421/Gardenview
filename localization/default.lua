@@ -623,7 +623,7 @@ return {
             },
 
             j_dw_pebble = {
-                name = "Pebble",
+                name = "Pebble Dancifer Jr.",
                 text = {
                     "{X:blind,C:white}X#1#{} Blind size"
                 },
@@ -633,7 +633,7 @@ return {
                 },
             },
             j_dw_astro = {
-                name = 'Astro',
+                name = 'Astro Novalite',
                 text = {
                     {
                         "Gains {C:chips}+#1#{} Hand for",
@@ -644,7 +644,7 @@ return {
                 }
             },
             j_dw_astro_stpc = {
-                name = 'Astro?',
+                name = 'Astro.. Starspace?',
                 text = {
                     {
                         "Gains {C:chips}+#1#{} Hand for",
@@ -685,7 +685,7 @@ return {
                 }
             },
             j_dw_sprout = {
-                name = "Sprout",
+                name = "Sprout Seedly",
                 text = {
                     "{C:chips}+#2#{} Hand for",
                     "each {C:money}$#3#{} owned",
@@ -693,7 +693,7 @@ return {
                 },
             },
             j_dw_shelly = {
-                name = "Shelly",
+                name = "Shelly Fossillian",
                 text = {
                     "Each {C:attention}Joker{} reduces",
                     "Blind Size by {X:blind,C:white}X#1#{}",
@@ -782,13 +782,13 @@ return {
                 }
             },
             j_dw_dessa = {
-                name = "{C:dw_dandy}Dessa{}",
+                name = "{C:dw_dandy}Medessa Injectine{}",
                 text = {
                     "{X:red,C:white}INCOMPLETE{}"
                 }
             },
             j_dw_dioda = {
-                name = "{C:dw_dandy}Dioda{}",
+                name = "{C:dw_dandy}Dioda Watts{}",
                 text = {
                     "{X:red,C:white}INCOMPLETE{}"
                 }
@@ -819,7 +819,7 @@ return {
                 }
             },
             j_dw_bassie = {
-                name = "Bassie",
+                name = "Bassie Bloomington",
                 text = {
                     "{C:attention}+#1#{} consumable slots",
                 },
@@ -854,7 +854,7 @@ return {
                     "{C:attention}Create{} a random Consumable at the end of round.",
                     "{C:attention}Create{} another when {C:attention}Boss Blind{} is defeated"
                 }]]
-                name = "Gourdy",
+                name = "Gourdy Holloway",
                 text = {
                     "Each {C:attention}Joker{} gives {C:chips}+#1#{} Chips,",
                     "{C:mult}+#2#{} Mult or {X:mult,C:white}X#3#{} Mult"
@@ -886,7 +886,7 @@ return {
                 },
             },
             j_dw_bobette = {
-                name = 'Bobette',
+                name = 'Bobette Carolynne',
                 text = {
                     {
                         "she saw the horrors"
