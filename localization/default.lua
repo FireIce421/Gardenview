@@ -293,6 +293,18 @@ return {
                     "Extremely Large Blind",
                 },
             },
+            bl_dw_dessa = {
+                name = "Medessa Injectine",
+                text = {
+                    "Incomplete",
+                },
+            },
+            bl_dw_dioda = {
+                name = "Dioda Watts",
+                text = {
+                    "Extremely Large Blind",
+                },
+            },
             bl_dw_blotjr = {
                 name = "Blot Jr",
                 text = {
@@ -769,6 +781,18 @@ return {
                     "{C:inactive}Currently{} {X:red,C:white}X#1#{} {C:inactive}Mult{}"
                 }
             },
+            j_dw_dessa = {
+                name = "{C:dw_dandy}Dessa{}",
+                text = {
+                    "{X:red,C:white}INCOMPLETE{}"
+                }
+            },
+            j_dw_dioda = {
+                name = "{C:dw_dandy}Dioda{}",
+                text = {
+                    "{X:red,C:white}INCOMPLETE{}"
+                }
+            },
 
 
             j_dw_eggson = {
@@ -1180,6 +1204,7 @@ return {
             k_gourdyspeak2 = "Trick or Treat!",
             
             k_dw_main = "Main",
+            k_dw_lethal = "Lethal",
 
             dw_rnd_odd = 'Odd',
             dw_rnd_even = 'Even',

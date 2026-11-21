@@ -20,3 +20,5 @@ SMODS.Rarity {
 	default_weight = 0.003,
 	pools = { ["Joker"] = true },
 }
+
+

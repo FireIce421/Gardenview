@@ -12,7 +12,7 @@ SMODS.Gradient {
 SMODS.Rarity {
     key = 'lethal',
     loc_txt = {},
-    badge_colour = SMODS.Gradients["dandy_lethal_gradient"],
+    badge_colour = SMODS.Gradients["dw_lethal_gradient"],
     default_weight = 0,
     pools = { ["Joker"] = false },
 }
