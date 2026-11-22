@@ -6,7 +6,7 @@ SMODS.Sound ({
 
 SMODS.Blind {
     key = 'astro',
-    atlas = 'dwBlind',
+    atlas = 'dwBlind_proto',
     pos = {x = 0, y = 24},
     
          
@@ -21,7 +21,7 @@ SMODS.Blind {
                     trigger = 'immediate',
                     func = function()
                         SMODS.juice_up_blind()
-                        play_sound('dandy_twisted_astro', 1, 0.4)
+                        play_sound('dw_twisted_astro', 1, 0.4)
                         return true
                     end
                 }))

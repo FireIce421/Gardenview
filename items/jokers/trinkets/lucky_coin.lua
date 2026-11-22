@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'luckycoin',
+    key = 'lucky_coin',
     cost = 6,
     rarity = "dw_trinketjoker",
     atlas = 'dwJoker',

@@ -33,6 +33,15 @@ SMODS.Atlas{
     key = 'dwBlind',
     path = "dwBlinds.png",
     atlas_table = 'ANIMATION_ATLAS',
+    frames = 21,
+    px = 34,
+    py = 34
+}
+
+SMODS.Atlas{
+    key = 'dwBlind_proto',
+    path = "dwBlinds.png",
+    atlas_table = 'ANIMATION_ATLAS',
     frames = 1,
     px = 34,
     py = 34
@@ -43,14 +52,6 @@ SMODS.Atlas {
     px = 71,
     py = 95,
     path = 'isojunk_crossmod_jokers.png'
-}
-SMODS.Atlas {
-    key = 'blinds',
-    px = 34,
-    py = 34,
-    path = 'blinds.png',
-    atlas_table = 'ANIMATION_ATLAS',
-    frames = 21
 }
 
 SMODS.Atlas {
@@ -98,12 +99,12 @@ end
 assert(SMODS.load_file("ui.lua"))()
 load_from_folder("items/backs") -- Decks
 load_from_folder("items/rarity") -- Rarities
-load_from_folder("items/blinds") -- Blinds
 load_from_folder("items/consumables") -- Consumables
 load_from_folder("items/tags") -- Tags
 load_from_folder("items/misc") -- Misc
 
 assert(SMODS.load_file("load/jokers.lua"))() -- Jokers
+assert(SMODS.load_file("load/blinds.lua"))() -- Blinds
 
 Gardenview.Colours = {
     points = darken(HEX("b4f2b6"), 0.2),

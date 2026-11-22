@@ -1,4 +1,4 @@
- --[[ SMODS.Sound {
+ SMODS.Sound {
     key = 'dandy_music',
     path = 'dw_mus_dandy.ogg',
     pitch = 1,
@@ -9,7 +9,7 @@
 
 SMODS.Blind {
     key = 'dandy',
-    atlas = 'dwBlind',
+    atlas = 'dwBlind_proto',
     pos = {x = 0, y = 0},
     dollars = 0,
     mult = 2,
@@ -118,6 +118,6 @@ G.FUNCS.use_card = function(e, mute, nosave)
         })
     end
     return result
-end ]]
+end 
 
 -- hallo boss, ye fireice fireice, i have a problem, yes, yes yes, lorey - start, no problem, drive 1 2 3 k k problem yes

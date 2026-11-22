@@ -1,10 +1,9 @@
 SMODS.Blind {
     key = 'blackout',
-    name = 'blackout',
-    boss = { min = 2 },
-    mult = 1.75,
+    big = {min = 5, allow_duplicates = true},
+    mult = 1.25,
     dollars = 4,
-    atlas = 'dw_blinds',
-    pos = {y = 1},
+    atlas = 'dwBlind',
+    pos = {x = 0, y = 45},
     boss_colour = HEX("000000")
 }

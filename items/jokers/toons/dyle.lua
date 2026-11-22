@@ -2,7 +2,8 @@ SMODS.Joker {
     key = 'dyle',
     rarity = 'dw_lethal',
     atlas = 'dwJoker',
-    pos = { x = 9, y = 7 },
+    pos = { x = 9, y = 10 },
+    soul_pos = { x = 9, y = 7 },
     cost = 40,
     config = {
         extra = {

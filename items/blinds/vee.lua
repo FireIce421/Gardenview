@@ -6,7 +6,7 @@ SMODS.Sound ({
 
 SMODS.Blind {
     key = 'vee',
-    atlas = 'dwBlind',
+    atlas = 'dwBlind_proto',
     pos = {x = 0, y = 28},
     
          

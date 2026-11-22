@@ -1,6 +1,6 @@
 SMODS.Blind {
     key = 'poppy',
-    atlas = 'dwBlind',
+    atlas = 'dwBlind_proto',
     pos = {x = 0, y = 7},
     
          

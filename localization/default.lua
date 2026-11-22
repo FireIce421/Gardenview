@@ -26,6 +26,30 @@ return {
                     "Cards are drawn face down"
                 }
             },
+            bl_dw_ichor_leak = {
+                name = "Ichor Leak",
+                text = {
+                    "Incomplete",
+                },
+            },
+            bl_dw_spring_fever = {
+                name = "Spring Fever",
+                text = {
+                    "Incomplete",
+                },
+            },
+            bl_dw_haunted_gala = {
+                name = "Haunted Gala",
+                text = {
+                    "Incomplete",
+                },
+            },
+            bl_dw_iced_over = {
+                name = "Iced Over",
+                text = {
+                    "Incomplete",
+                },
+            },
             bl_dw_boxten = {
                 name = "Twisted Boxten",
                 text = {
@@ -164,6 +188,12 @@ return {
                     'card held in hand'
                 },
             },
+            bl_dw_waxwell = {
+                name = "Twisted Waxwell",
+                text = {
+                    "Incomplete"
+                },
+            },
             bl_dw_squirm = {
                 name = "Twisted Squirm",
                 text = {
@@ -196,8 +226,7 @@ return {
             bl_dw_sprout = {
                 name = "Sprout's Catastrophe",
                 text = {
-                    "All cards do",
-                    "not score Chips"
+                    "Incomplete"
                 },
             },
             bl_dw_vee = {
@@ -302,7 +331,7 @@ return {
             bl_dw_dioda = {
                 name = "Dioda Watts",
                 text = {
-                    "Extremely Large Blind",
+                    "Incomplete",
                 },
             },
             bl_dw_blotjr = {
@@ -314,19 +343,401 @@ return {
         Edition = {},
         Enhanced = {},
         Joker = {
+            j_dw_coin_purse = {
+                name = "Coin Purse",
+                text = {
+                    "{C:chips}+#1#{} Chips",
+                },
+            },
+            j_dw_research_map = {
+                name = "Research Map",
+                text = {
+                    "Earn {C:money}$#1#{} when",
+                    "{C:attention}Blind{} is skipped"
+                },
+            },
+            j_dw_machine_manual = {
+                name = "Machine Manual",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult",
+                },
+            },
+            j_dw_wrench = {
+                name = "Wrench",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_speedy_shoes = {
+                name = "Speedy Shoes",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_speedometer = {
+                name = "Speedometer",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_thinking_cap = {
+                name = "Thinking Cap",
+                text = {
+                    "{C:attention}+#1#{} hand size",
+                    "{C:red}#2#{} discards"
+                },
+            },
+            j_dw_alarm = {
+                name = "Alarm",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult during a",
+                    "a {C:attention}Boss Blind{}"
+                },
+            },
+            j_dw_thermos = {
+                name = "Thermos",
+                text = {
+                    "Sell this card to",
+                    "create {C:attention}#1#{} free",
+                    "{C:attention}Uncommon Tags",
+                },
+            },
+            j_dw_pull_toy = {
+                name = "Pull Toy",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult on {C:attention}first",
+                    "{C:attention}hand{} of round",
+                },
+            },
+            j_dw_pop_pack = {
+                name = "Pop Pack",
+                text = {
+                    "{C:red}+#1#{} discards",
+                    "{C:chips}#2#{} hand",
+                },
+            },
+            j_dw_megaphone = {
+                name = "Megaphone",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_cooler = {
+                name = "Cooler",
+                text = {
+                    "Sell this card to",
+                    "create a free",
+                    "{C:attention}Rare Tag",
+                },
+            },
+            j_dw_cardboard_armor = {
+                name = "Cardboard 'Armor'",
+                text = {
+                    "Prevents Death during",
+                    "a {C:attention}Boss Blind{}",
+                    "{C:red,E:2}self destructs{}",
+                },
+            },
+            j_dw_party_favor = {
+                name = "Party Favor",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_blue_bandana = {
+                name = "Blue Bandana",
+                text = {
+                    "{C:chips}+#1#{} Chips for each",
+                    "card in played hand",
+                },
+            },
+            j_dw_paint_bucket = {
+                name = "Paint Bucket",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_sweet_charm = {
+                name = "Sweet Charm",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_clown_horn = {
+                name = "Clown Horn",
+                text = {
+                    "{C:mult}+#1#{} Mult on {C:attention}odd",
+                    "numbered rounds",
+                    "{C:inactive}#2#"
+                },
+            },
+            j_dw_pink_bow = {
+                name = "Pink Bow",
+                text = {
+                    "{C:mult}+#2#{} Mult for each",
+                    "hand played this round",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
+                },
+            },
             j_dw_brick = {
                 name = "Brick",
                 text = {
                     "{X:default,C:white}X0.8{} Chips and Mult"
                 }
             },
-            j_dw_luckycoin = {
+            j_dw_feather_duster = {
+                name = "Feather Duster",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_party_popper = {
+                name = "Party Popper",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_spare_bulb = {
+                name = "Spare Bulb",
+                text = {
+                    "{C:red}Rare{} Jokers",
+                    "each give {C:chips}+#1#{} Chips",
+                },
+            },
+            j_dw_ghost_snakes_in_a_can = {
+                name = "Ghost Snakes in a Can",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_fishing_rod = {
+                name = "Fishing Rod",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_ribbon_spool = {
+                name = "Ribbon Spool",
+                text = {
+                    "{C:mult}+#1#{} Mult on {C:attention}even",
+                    "numbered rounds",
+                    "{C:inactive}#2#"
+                },
+            },
+            j_dw_magnifying_glass = {
+                name = "Magnifying Glass",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "upgrade last played",
+                    "{C:attention}Poker hand{} of round"
+                },
+            },
+            j_dw_fancy_purse = {
+                name = "Fancy Purse",
+                text = {
+                    "{C:chips}+#1#{} Chips",
+                },
+            },
+            j_dw_dog_plush = {
+                name = "Dog Plush",
+                text = {
+                    "{C:chips}+#1#{} Chips",
+                    "{C:mult}+#2#{} Mult"
+                },
+            },
+            j_dw_mime_makeup = {
+                name = "Mime Makeup",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_diary = {
+                name = "Diary",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_lucky_coin = {
                 name = "Lucky Coin",
                 text = {
                     "Creates a random {C:attention}Joker{}",
                     "or {C:tarot}Consumable{} when",
                     "a {C:attentin}Blind{} is {C:attention}skipped{}"
                 }
+            },
+            j_dw_vanity_mirror = {
+                name = "Vanity Mirror",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_friendship_bracelet = {
+                name = "Friendship Bracelet",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_crayon_set = {
+                name = "Crayon Set",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_stress_ball = {
+                name = "Stress Ball",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_cherished_blanket = {
+                name = "Cherished Blanket",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_bone = {
+                name = "Pebble's Bone",
+                text = {
+                    "{C:chips}Common{} Jokers",
+                    "each give {C:mult}+#1#{} Mult",
+                },
+            },
+            j_dw_star_pillow = {
+                name = "Star Pillow",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_participation_award = {
+                name = "Participation Award",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_savory_charm = {
+                name = "Savory Charm",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_vee_remote = {
+                name = "Vee's Remote",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult during a",
+                    "{C:attention}Small Blind{} or a",
+                    "{C:attention}Big Blind{}"
+                },
+            },
+            j_dw_dandy_plush = {
+                name = "Dandy Plush",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_train_whistle = {
+                name = "Train Whistle",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_personnel_badge = {
+                name = "Personnel Badge",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_missing_piece = {
+                name = "Missing Piece",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_blushy_bat = {
+                name = "Blushy Bat",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_egg_radar = {
+                name = "Egg Radar",
+                text = {
+                    "Becomes {C:attention}Eggson{}, {C:attention}Flyte{},",
+                    "{C:attention}Cocoa{} or {C:attention}Bassie{} when",
+                    "{C:attention}Blind{} is defeated"
+                },
+            },
+            j_dw_scrapbook = {
+                name = "Scrapbook",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_glazed_fondant_bag = {
+                name = "Glazed Fondant Bag",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_whispering_flower = {
+                name = "Whispering Flower",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_bone_needle_and_thread = {
+                name = "Bone Needle & Thread",
+                text = {
+                    "Becomes {C:attention}Ribecca{}, {C:attention}Soulvester{},",
+                    "{C:attention}Eclipse{} or {C:attention}Gourdy{} when",
+                    "{C:attention}Blind{} is defeated"
+                },
+            },
+            j_dw_soul_sword = {
+                name = "Soul Sword",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_moon_pack_heirloom = {
+                name = "Moon Pack Heirloom",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_memory_locket = {
+                name = "Memory Locket",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
+            },
+            j_dw_festive_lights = {
+                name = "Festive Lights",
+                text = {
+                    "Becomes {C:attention}Rudie{}, {C:attention}Ginger{},",
+                    "{C:attention}Coal{} or {C:attention}Bobette{} when",
+                    "{C:attention}Blind{} is defeated"
+                },
+            },
+            j_dw_peppermint_icing = {
+                name = "Peppermint Icing",
+                text = {
+                    "Played cards with an",
+                    "{C:attention}enhancement{} give",
+                    "{C:mult}+#1#{} Mult when scored",
+                },
+            },
+            j_dw_coal_trinket = {
+                name = "Coal",
+                text = {
+                    "Doubles {C:attention}Blind{}",
+                    "requirement",
+                }
+            },
+            j_dw_toy_kit = {
+                name = "Toy Kit",
+                text = {
+                    "{X:mult,C:white}INCOMPLETE{}",
+                },
             },
 
             j_dw_poppy = {

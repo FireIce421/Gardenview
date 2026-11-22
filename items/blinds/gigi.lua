@@ -1,6 +1,6 @@
 SMODS.Blind {
     key = 'gigi',
-    atlas = 'dwBlind',
+    atlas = 'dwBlind_proto',
     pos = {x = 0, y = 20},
     dollars = 5,
     mult = 2,
