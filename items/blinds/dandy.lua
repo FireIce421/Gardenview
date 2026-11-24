@@ -29,7 +29,7 @@ SMODS.Blind {
         end
         if context.end_of_round and context.game_over == false and context.main_eval then
             G.hand:change_size(-6)
-            if dandysworld.config.dwJokers then
+            if Gardenview.config.dwJokers then
                 SMODS.add_card{key = "j_dw_dandy"}
                 check_for_unlock{type = 'dw_dandy'}
             end
@@ -91,7 +91,7 @@ function SMODS.current_mod.calculate(self, context)
         if G.GAME.current_round.dw_shopSkipCount >= G.GAME.current_round.dw_dandy_threshold then
             check_for_unlock{type = 'dw_astro'} -- Unlocks Astro
 
-            if dandysworld.config.dwBlinds then
+            if Gardenview.config.dwBlinds then
                 local numerator = G.GAME.current_round.dw_shopSkipCount - G.GAME.current_round.dw_dandy_threshold + G.GAME.current_round.dw_dandy_baseNumerator
                 local denominator = G.GAME.current_round.dw_dandy_denominator
                 if 
