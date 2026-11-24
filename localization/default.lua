@@ -695,7 +695,7 @@ return {
             j_dw_soul_sword = {
                 name = "Soul Sword",
                 text = {
-                    "{X:mult,C:white}INCOMPLETE{}",
+                    "{C:chips}+#1#{} Hand"
                 },
             },
             j_dw_moon_pack_heirloom = {
@@ -1247,7 +1247,9 @@ return {
             j_dw_soulvester = {
                 name = "Soulvester",
                 text = {
-                    "{C:chips}+#1#{} Hand"
+                    "Prevents Death at the",
+                    "cost of {C:chips}-#1#{} Hand",
+                    "{C:red}self destructs"
                 },
             },
             j_dw_eclipse = {
@@ -1589,6 +1591,8 @@ return {
             k_dw_dandy_stage3_buy_5 = "About time.",
             k_dw_dandy_stage3_buy_6 = "Heh, you had me worried there for a second.",
             
+            ph_dw_soulvester = "Saved by Soulvester",
+
             ph_dw_stage1 = "Spare some, will ya?",
             ph_dw_stage2 = "Don't Ignore Me!",
             ph_dw_stage3 = "Be that way...",
