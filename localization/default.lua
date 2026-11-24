@@ -340,7 +340,20 @@ return {
                 },
             },
         },
-        Edition = {},
+        Edition = {
+            e_dw_relentless = {
+                name = "Relentless",
+                text = {
+                    "Retriggers Once"
+                }
+            },
+            e_dw_controlled = {
+                name = "Controlled",
+                text = {
+                    "Incomplete"
+                }
+            },
+        },
         Enhanced = {},
         Joker = {
             j_dw_coin_purse = {

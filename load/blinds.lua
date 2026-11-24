@@ -63,7 +63,7 @@ assert(SMODS.load_file("items/blinds/sprout.lua"))()
 assert(SMODS.load_file("items/blinds/shelly.lua"))()
 assert(SMODS.load_file("items/blinds/vee.lua"))()
 
---assert(SMODS.load_file("items/blinds/dandy.lua"))()
+assert(SMODS.load_file("items/blinds/dandy.lua"))()
 assert(SMODS.load_file("items/blinds/dyle.lua"))()
 assert(SMODS.load_file("items/blinds/dessa.lua"))()
 assert(SMODS.load_file("items/blinds/dioda.lua"))()

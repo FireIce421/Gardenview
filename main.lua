@@ -102,7 +102,7 @@ load_from_folder("items/rarity") -- Rarities
 load_from_folder("items/consumables") -- Consumables
 load_from_folder("items/tags") -- Tags
 load_from_folder("items/misc") -- Misc
-
+load_from_folder("items/editions") -- Editions
 assert(SMODS.load_file("load/jokers.lua"))() -- Jokers
 assert(SMODS.load_file("load/blinds.lua"))() -- Blinds
 
