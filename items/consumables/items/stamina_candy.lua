@@ -1,6 +1,6 @@
 SMODS.Consumable {
-    key = "stamina",
-    set = "candy",
+    key = "stamina_candy",
+    set = "item",
     cost = 4,
     can_use = function(self, card)
         return true

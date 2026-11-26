@@ -403,7 +403,7 @@ return {
             j_dw_alarm = {
                 name = "Alarm",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult during a",
+                    "{X:mult,C:white}X#1#{} Mult during",
                     "a {C:attention}Boss Blind{}"
                 },
             },
@@ -526,7 +526,9 @@ return {
             j_dw_fishing_rod = {
                 name = "Fishing Rod",
                 text = {
-                    "{X:mult,C:white}INCOMPLETE{}",
+                    "Grants a {C:attention}Coupon Tag",
+                    "when cashing out with",
+                    "{C:money}$#1#{} or greater"
                 },
             },
             j_dw_ribbon_spool = {
@@ -912,8 +914,6 @@ return {
                 text = { {
                     "Gives 3 Candy Consumables",
                     "when a {C:attention}Boss Blind{} is defeated.",
-                },{
-                    "{C:blue,s:0.8}#1#{}"
                 }
                 }
             },
@@ -951,8 +951,7 @@ return {
             j_dw_blot = {
                 name = "Blot",
                 text = {
-                    "{X:mult,C:white}^1.15{} Mult.",
-                    "Create Blot Jr. when a {C:attention}Boss Blind{} is defeated."
+                    "{X:mult,C:white}INCOMPLETE"
                 }
             },
             j_dw_blotjr = {
@@ -1138,8 +1137,6 @@ return {
                     "{C:attention}#2#{} extra items and",
                     "allows {C:attention}#1#{} more item",
                     "to be chosen",
-                    },{
-                    "{E:1,C:green,s:0.7}#3#{}"
                     }
                 },
                 unlock = {
@@ -1444,9 +1441,7 @@ return {
                     }
                 }
             },
-        },
-        candy = {
-            c_dw_speed = {
+            c_dw_speed_candy = {
                 name = "Speed Candy",
                 text = {
                     {
@@ -1457,7 +1452,7 @@ return {
                     }
                 }
             },
-            c_dw_stamina = {
+            c_dw_stamina_candy = {
                 name = "Stamina Candy",
                 text = {
                     {
@@ -1468,7 +1463,7 @@ return {
                     }
                 }
             },
-            c_dw_stealth = {
+            c_dw_stealth_candy = {
                 name = "Stealth Candy",
                 text = {
                     {
@@ -1479,7 +1474,7 @@ return {
                     }
                 }
             },
-            c_dw_extract = {
+            c_dw_extraction_speed_candy = {
                 name = "Extraction Speed Candy",
                 text = {
                     {
@@ -1540,17 +1535,186 @@ return {
         challenge_names = {},
         collabs = {},
         dictionary = {
+            
+            k_dw_poppy_quote_1 = "Go Poppy! Go Poppy!",
+            k_dw_poppy_quote_2 = "Alright, what's next?",
+            k_dw_poppy_quote_3 = "Yippee!",
 
-            k_dw_yatta_quote1 = "PHEW! Good thing my tail hasn't been TANGLED!",
-            k_dw_yatta_quote2 = "Did I drop candy ANYWHERE in the elevator?",
-            k_dw_yatta_quote3 = "AHAHAHAaaa... Thought of something funny!",
-            k_dw_yatta_quote4 = "Candy candy caNDY, CANDY FOR ALL!!!",
+            k_dw_boxten_quote_1 = "Uh... any other cards I need to finish?",
+            k_dw_boxten_quote_2 = "I think I heard something...",
+            k_dw_boxten_quote_3 = "I'm scared to think of what's in the next Blind...",
+            k_dw_boxten_quote_4 = "I think I forgot something",
 
-            k_dw_finn_complete1 = "Hook, line and sinker!",
-            k_dw_finn_complete2 = "I was born to fish, not to play cards!", -- i claim credit for this quote (fireice)
-            k_dw_finn_complete3 = "It's as shrimp-le as that!",
-            k_dw_finn_complete4 = "That wasn't very clam-plicated!",
+            k_dw_shrimpo_quote_1 = "I DON'T KNOW WHAT EVERYONE ELSE TRIES WHEN I'M JUST BETTER!!!",
+            k_dw_shrimpo_quote_2 = "I HATE PLAYING CARDS!",
+            k_dw_shrimpo_quote_3 = "I'M BETTER AT ANYONE THAN THIS!!!",
 
+            k_dw_finn_quote_1 = "Hook, line and sinker!",
+            k_dw_finn_quote_2 = "I was born to fish, not to play cards!", -- i claim credit for this quote (fireice)
+            k_dw_finn_quote_3 = "It's as shrimp-le as that!",
+            k_dw_finn_quote_4 = "That wasn't very clam-plicated!",
+
+            k_dw_toodles_quote_1 = "Hehehe!",
+            k_dw_toodles_quote_2 = "Come on! Let's go!",
+            k_dw_toodles_quote_3 = "I'm helping!",
+
+            k_dw_glisten_quote_1 = "Goodness! I make this whole thing look easy!",
+            k_dw_glisten_quote_2 = "Nobody's perfect they say... I'm the proof they're wrong!",
+            k_dw_glisten_quote_3 = "Was anyone watching? I hope so!",
+
+            k_dw_tisha_quote_1 = "Not a stain in sight!",
+            k_dw_tisha_quote_2 = "I think I missed a spot!",
+            k_dw_tisha_quote_3 = "Where's my spare feather duster?",
+
+            k_dw_brusha_quote_1 = "At least someone is doing something around here",
+            k_dw_brusha_quote_2 = "Are my bristles knotted?",
+            k_dw_brusha_quote_3 = "I'd like for this to end sooner than later",
+
+            k_dw_teagan_quote_1 = "I wonder what kind of tea I should have after this",
+            k_dw_teagan_quote_2 = "I hope my handle's still intact",
+            k_dw_teagan_quote_3 = "I hope this doesn't take too long",
+            
+            k_dw_rodger_quote_1 = "I do not have the time for all of these 'activities'",
+            k_dw_rodger_quote_2 = "It would be a great pleasure if this was finished sooner rather than later",
+            k_dw_rodger_quote_3 = "What secrets will the future endeavors contain?",
+            
+            k_dw_looey_quote_1 = "Anyone watching? Haha...",
+            k_dw_looey_quote_2 = "This will be remembered as my best act yet!",
+            k_dw_looey_quote_3 = "Terrific!",
+
+            k_dw_yatta_quote_1 = "PHEW! Good thing my tail hasn't been TANGLED!",
+            k_dw_yatta_quote_2 = "Did I drop candy ANYWHERE in the elevator?",
+            k_dw_yatta_quote_3 = "AHAHAHAaaa... Thought of something funny!",
+            k_dw_yatta_quote_4 = "Candy candy caNDY, CANDY FOR ALL!!!",
+
+            k_dw_blot_quote_1 = "!olleH",
+            k_dw_blot_quote_2 = "!nuf si sihT",
+            k_dw_blot_quote_3 = "...ot pu era yeooL dna attaY tahw rednow I",
+            
+            k_dw_gigi_quote_1 = "Hoping for a good souvenir on the next Shop!",
+            k_dw_gigi_quote_2 = "I swear I saw something real shiny last pack",
+            k_dw_gigi_quote_3 = "Mwehehe...",
+
+            k_dw_waxwell_quote_1 = "I only finished this to help myself!",
+            k_dw_waxwell_quote_2 = "What DARK AND TWISTED DEEDS can I do on the next round?",
+            k_dw_waxwell_quote_3 = "Man... I hope the smoke alarms don't work this time",
+            
+            k_dw_razzledazzle_quote_1 = "Checking in on you Dazzle, you alright? (I'm finding this kinda fun...)",
+            k_dw_razzledazzle_quote_2 = "Oh what fun! (Oh the misery...)",
+            k_dw_razzledazzle_quote_3 = "I think we did so well that last round! (If you say so...)",
+            
+            k_dw_flutter_quote_1 = "!!!",
+            k_dw_flutter_quote_2 = "...",
+            k_dw_flutter_quote_3 = "...?",
+
+            k_dw_eggson_quote_1 = "Eggs",
+            k_dw_eggson_quote_2 = "I wonder if Jimbo hid an egg in here...",
+            k_dw_eggson_quote_3 = "This is a nice change of pace!",
+
+            k_dw_flyte_quote_1 = "Wow, I'm creating tons of memories!",
+            k_dw_flyte_quote_2 = "Good thing I can stretch my wings for a bit",
+            k_dw_flyte_quote_3 = "I feel like I'll be doing thirty-nine more of these or something...",
+            
+            k_dw_cocoa_quote_1 = "Golly, this is not what I expected to do today!",
+            k_dw_cocoa_quote_2 = "I could go for another Bonbon...",
+            k_dw_cocoa_quote_3 = "Let's hop to it!",
+
+            k_dw_bassie_quote_1 = "Just doing my part!",
+            k_dw_bassie_quote_2 = "Is one of my flowers wilted?",
+            k_dw_bassie_quote_3 = "This is nice...",
+
+            k_dw_brightney_quote_1 = "What's next on my To-Do list?",
+            k_dw_brightney_quote_2 = "I can't wait to get to reading after this!",
+            k_dw_brightney_quote_3 = "Sparkle on!",
+
+            k_dw_connie_quote_1 = "Hah... Boo",
+            k_dw_connie_quote_2 = "Thinking about what to haunt after this",
+            k_dw_connie_quote_3 = "It would've been easier if I just haunted the run, but whatever",
+
+            k_dw_ribecca_quote_1 = "I feel colder than usual...",
+            k_dw_ribecca_quote_2 = "I can at least say this whole ordeal has left me inspired.",
+            k_dw_ribecca_quote_3 = "Is my makeup smudged?",
+
+            k_dw_soulvester_quote_1 = "I am confident this run will end in victory",
+            k_dw_soulvester_quote_2 = "Nothing will stop me from this venture",
+            k_dw_soulvester_quote_3 = "A knight always protects his friends!",
+
+            k_dw_eclipse_quote_1 = "AWOOO!",
+            k_dw_eclipse_quote_2 = "I've got a scent I'm tracking...",
+            k_dw_eclipse_quote_3 = "Consider this as quickly done as my hunts!",
+
+            k_dw_gourdy_quote_1 = "Trick or Treat!",
+            k_dw_gourdy_quote_2 = "I wonder if the next shop has tons of candy",
+            k_dw_gourdy_quote_3 = "Something spooky is around here... it's me! I'm the spooky!",
+            
+            k_dw_squirm_quote_1 = "Snf... sniffle-",
+            k_dw_squirm_quote_2 = "I hope I-I didn't mess this up...",
+            k_dw_squirm_quote_3 = "T-This is way flatter than I... oh.", --He ate a card
+
+            k_dw_cosmo_quote_1 = "Do I... smell a burning scent? Uh probably nothing...",
+            k_dw_cosmo_quote_2 = "I'm thinking of baking something after this",
+            k_dw_cosmo_quote_3 = "Hmm... maybe I could improve some",
+
+            k_dw_rudie_quote_1 = "Merry Christmas!",
+            k_dw_rudie_quote_2 = "Happy Holidays!",
+            k_dw_rudie_quote_3 = "I'm ready for more fun!",
+
+            k_dw_ginger_quote_1 = "Did I smudge my icing makeup?",
+            k_dw_ginger_quote_2 = "Do I smell a scent of cinnamon? Or is it just me?",
+            k_dw_ginger_quote_3 = "I think I have time to bake after this",
+
+            k_dw_coal_quote_1 = "Bork, bwuff",
+            k_dw_coal_quote_2 = "...Grr",
+            k_dw_coal_quote_3 = "Bworf",
+
+            k_dw_bobette_quote_1 = "I feel so festive!",
+            k_dw_bobette_quote_2 = "This sweater is a little itchy...",
+            k_dw_bobette_quote_3 = "Honestly I'm just happy to be here!",
+
+            k_dw_goob_quote_1 = "I'm having so much fun!",
+            k_dw_goob_quote_2 = "I could use a hug right now!",
+            k_dw_goob_quote_3 = "Scraps would be so proud!",
+
+            k_dw_scraps_quote_1 = "Is my tail crumpled?",
+            k_dw_scraps_quote_2 = "I wonder if I could make my own Joker?",
+            k_dw_scraps_quote_3 = "Goob would be so impressed!",
+
+            k_dw_pebble_quote_1 = "Arf! Bark!",
+            k_dw_pebble_quote_2 = "(Sniffing)",
+            k_dw_pebble_quote_3 = "Bark bark!",
+
+            k_dw_astro_quote_1 = "I wish it wasn't so noisy...",
+            k_dw_astro_quote_2 = "Sweet dreams...",
+            k_dw_astro_quote_3 = "My nap will have to wait...",
+
+            k_dw_sprout_quote_1 = "Did I remember to turn off the oven? Hope so!",
+            k_dw_sprout_quote_2 = "I wonder if we'll get a snack break!",
+            k_dw_sprout_quote_3 = "This is giving me some ideas on what to bake after this!",
+
+            k_dw_shelly_quote_1 = "I'm trying my best!",
+            k_dw_shelly_quote_2 = "I should go assemble some fossils after this",
+            k_dw_shelly_quote_3 = "What a historical event!",
+
+            k_dw_vee_quote_1 = "This would be the perfect time for a commercial!",
+            k_dw_vee_quote_2 = "Question 1: Is this a waste of my time? Probably.",
+            k_dw_vee_quote_3 = "As simple as binary code!",
+            k_dw_vee_quote_4 = "I bet Dandy couldn't do this!",
+
+            k_dw_dandy_quote_1 = "My botanical escapades continue!",
+            k_dw_dandy_quote_2 = "Hope we don't need to do that again!",
+            k_dw_dandy_quote_3 = "Impressive, I'm happy to help now",
+            
+            k_dw_dyle_quote_1 = "I must say, I am impressed",
+            k_dw_dyle_quote_2 = "I'm sure I will provide some meaningful assistance, hm?",
+            k_dw_dyle_quote_3 = "Truly some wonderful effort",
+            
+            k_dw_dioda_quote_1 = "Wow! Can't wait to have zome fun!",
+            k_dw_dioda_quote_2 = "I'm so exzited to FINALLY be here!",
+            k_dw_dioda_quote_3 = "Getting me here wouldn't have been eazy, iz it?",
+
+            k_dw_dessa_quote_1 = "I could be finishing the work after this...",
+            k_dw_dessa_quote_2 = "Providing some help is the least I can do",
+            k_dw_dessa_quote_3 = "Perhaps you could be of some assistance after this?",
 
             k_dw_trinketjoker = "Trinket",
             k_dw_itemjoker = "Item",
@@ -1565,10 +1729,7 @@ return {
             k_dw_blotyap1 = "Jr. Incoming!",
             k_dw_blotyap2 = "!em inim A",
 
-            k_dw_veespeak1 = "This would be the perfect time for a commercial!",
-            k_dw_veespeak2 = "Question 1: Is this a waste of my time? Probably.",
-            k_dw_veespeak3 = "As simple as binary code!",
-            k_dw_veespeak4 = "I bet Dandy couldn't do this!",
+            
 
             k_dw_dandy_stage1_1 = "So no items? That's ok! I'll be back!",
             k_dw_dandy_stage1_2 = "I'll have a better stock next time!",
@@ -1637,6 +1798,15 @@ return {
             dw_rnd_odd = 'Odd',
             dw_rnd_even = 'Even',
 
+            dw_fishing_rod = '+1 Coupon',
+
+            dw_options_joker_quotes = "Toon Quotes",
+
+            dw_options_fun = "Fun Stuff",
+            dw_options_fun_jokers = "Fun Jokers",
+            dw_options_twisted_jokers = "Twisted Jokers",
+            dw_options_off = "Off",
+            dw_options_on = "On",
             dw_options_apply = "Apply Changes",
 
         },

@@ -1,66 +1,6 @@
 Gardenview = SMODS.current_mod
 GRDNVW_UTIL = {}
 
-SMODS.Atlas {
-    key = 'modicon',
-    px = 34,
-    py = 34,
-    path = 'dwicon.png'
-}
-
-SMODS.Atlas {
-    key = 'dw',
-    px = 71,
-    py = 95,
-    path = 'dandysworld.png'
-}
-
-SMODS.Atlas {
-    key = 'dwJoker',
-    px = 71,
-    py = 95,
-    path = 'jokers.png'
-}
-
-SMODS.Atlas {
-    key = 'dwTag',
-    px = 34,
-    py = 34,
-    path = 'dwTags.png'
-}
-
-SMODS.Atlas{
-    key = 'dwBlind',
-    path = "dwBlinds.png",
-    atlas_table = 'ANIMATION_ATLAS',
-    frames = 21,
-    px = 34,
-    py = 34
-}
-
-SMODS.Atlas{
-    key = 'dwBlind_proto',
-    path = "dwBlinds.png",
-    atlas_table = 'ANIMATION_ATLAS',
-    frames = 1,
-    px = 34,
-    py = 34
-}
-
-SMODS.Atlas {
-    key = 'isojoker',
-    px = 71,
-    py = 95,
-    path = 'isojunk_crossmod_jokers.png'
-}
-
-SMODS.Atlas {
-    key = 'dashjoker',
-    px = 71,
-    py = 95,
-    path = 'balaladash_crossmod_jokers.png'
-}
-
 SMODS.Font({
     key = 'fredokaone',
     path = 'dwfont.ttf',
@@ -97,14 +37,16 @@ function SMODS.current_mod.reset_game_globals(run_start)
 end
 
 assert(SMODS.load_file("ui.lua"))()
+assert(SMODS.load_file("items/atlas.lua"))() -- Atlases
+
 load_from_folder("items/backs") -- Decks
 load_from_folder("items/rarity") -- Rarities
-load_from_folder("items/consumables") -- Consumables
 load_from_folder("items/tags") -- Tags
 load_from_folder("items/misc") -- Misc
 load_from_folder("items/editions") -- Editions
-assert(SMODS.load_file("load/jokers.lua"))() -- Jokers
 assert(SMODS.load_file("load/blinds.lua"))() -- Blinds
+assert(SMODS.load_file("load/jokers.lua"))() -- Jokers
+assert(SMODS.load_file("load/consumables.lua"))() -- Blinds
 
 Gardenview.Colours = {
     points = darken(HEX("b4f2b6"), 0.2),

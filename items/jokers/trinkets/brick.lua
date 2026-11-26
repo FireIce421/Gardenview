@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "brick",
     cost = 10,
-    rarity = "dw_trinketjoker",
+    rarity = 1,
     atlas = "dwJoker",
     pos = {x=0,y=2},
     calculate = function(self,card,context)

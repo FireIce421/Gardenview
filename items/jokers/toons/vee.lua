@@ -52,7 +52,8 @@ SMODS.Joker {
         end
     end,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.choice_mod, card.ability.extra.size_mod, localize('k_dw_veespeak' .. pseudorandom("tv", 1, 4)) }, key = self.key }
+        -- Gonna wait until next smods update to add the quotes
+        return { vars = { card.ability.extra.choice_mod, card.ability.extra.size_mod}, key = self.key }
     end,
     check_for_unlock = function(self, args)
         return args.type == 'dw_vee'

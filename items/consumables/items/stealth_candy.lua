@@ -1,6 +1,6 @@
 SMODS.Consumable {
-    key = 'stealth',
-    set = 'candy',
+    key = 'stealth_candy',
+    set = 'item',
     config = { extra = { blind = 0.95 } },
     loc_vars = function(self, info_queue, card)
         return {

@@ -3,7 +3,7 @@ SMODS.Joker{
     atlas = 'dwJoker',
     pos = { x = 2, y = 9},
     soul_pos=nil,
-    rarity = 1,
+    rarity = 2,
     cost = 1,
     config = { extra = {} },
     blueprint_compat=true,

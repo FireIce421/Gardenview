@@ -1,13 +1,13 @@
 --ripped STRAIGHT from isotypical's junkyard..................
 SMODS.Joker {
     key = 'yatta',
-    rarity = 3,
+    rarity = 1,
     cost = 8,
     atlas = 'dw',
     pos = { x = 0, y = 0 },
     soul_pos = { x = 1, y = 0 },
     loc_vars = function(self, info_queue, card)
-        return { vars = { localize('k_dw_yatta_quote' .. pseudorandom("seed", 1, 4)) } }
+        --return { vars = { localize('k_dw_yatta_quote_' .. pseudorandom("seed", 1, 4)) } }
     end,
     blueprint_compat = true,
 
@@ -19,15 +19,15 @@ SMODS.Joker {
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             SMODS.add_card {
-                                set = 'dw_candy',
+                                set = 'dw_item',
                                 edition = 'e_negative'
                             }
                             SMODS.add_card {
-                                set = 'dw_candy',
+                                set = 'dw_item',
                                 edition = 'e_negative'
                             }
                             SMODS.add_card {
-                                set = 'dw_candy',
+                                set = 'dw_item',
                                 edition = 'e_negative'
                             }
                             G.GAME.consumeable_buffer = 0

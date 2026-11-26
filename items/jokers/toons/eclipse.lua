@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "eclipse",
-    rarity = 2,
+    rarity = 3,
     cost = 8,
     atlas = 'dwJoker',
     pos = { x = 6, y = 9 }, --nice
